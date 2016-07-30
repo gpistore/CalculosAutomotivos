@@ -1,8 +1,12 @@
 <resources>
-    <string name="app_name">CalculosAutomotivos</string>
+    <string name="app_name">Cálculos Automotivos</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Abrir Aba de Navegação</string>
+    <string name="navigation_drawer_close">Fechar Aba de Navegação</string>
 
-    <string name="action_settings">Settings</string>
+        <!-- TODO: Remove or change this placeholder text -->
+    <string name="Curso_vira">Curso do Virabrequim:</string>
+    <string name="Comprimento_bielas">Comprimento das Bielas</string>
+    <string name="Diametro">Diâmetro</string>
+    <string name="num_cil">Nº de Cilindros</string>
 </resources>
