@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -51,9 +51,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.rl) {
-            // Handle the camera action
+            FragmentManager fm = getFragmentManager();
+            RlFragment RL = new RlFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, RL).commit();
         } else if (id == R.id.vmp) {
-
+            FragmentManager fm = getFragmentManager();
+            VmpFragment Vmp = new VmpFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Vmp).commit();
         } else if (id == R.id.bicos) {
 
         } else if (id == R.id.cambio) {

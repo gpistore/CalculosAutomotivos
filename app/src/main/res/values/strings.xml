@@ -4,9 +4,17 @@
     <string name="navigation_drawer_open">Abrir Aba de Navegação</string>
     <string name="navigation_drawer_close">Fechar Aba de Navegação</string>
 
-        <!-- TODO: Remove or change this placeholder text -->
-    <string name="Curso_vira">Curso do Virabrequim:</string>
-    <string name="Comprimento_bielas">Comprimento das Bielas</string>
-    <string name="Diametro">Diâmetro</string>
-    <string name="num_cil">Nº de Cilindros</string>
+    <string name="Curso_vira">Curso do Virabrequim: </string>
+    <string name="Comprimento_bielas">Comprimento das Bielas: </string>
+    <string name="Diametro">Diâmetro: </string>
+    <string name="num_cil">Nº de Cilindros: </string>
+    <string name="RL">R/L: </string>
+    <string name="cilindrada">Cilindrada: </string>
+
+    <string name="erro_vira">Preencha o Curso do Virabrequim!</string>
+    <string name="erro_diam">Preencha o Diâmetro do Pistão!</string>
+    <string name="erro_bielas">Preencha o Comprimento das Bielas!</string>
+    <string name="erro_cilindros">Preencha a Quantidade de Cilindros!</string>
+    <string name="botao_calcular">Calcular</string>
+
 </resources>
