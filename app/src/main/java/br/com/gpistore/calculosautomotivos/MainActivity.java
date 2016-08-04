@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         FragmentManager fm = getFragmentManager();
-         RlFragment RL = new RlFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, RL).commit();
+        MainFragment Main = new MainFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Main).commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -51,11 +51,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.rl) {
-            FragmentManager fm = getFragmentManager();
             RlFragment RL = new RlFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, RL).commit();
         } else if (id == R.id.vmp) {
-            FragmentManager fm = getFragmentManager();
             VmpFragment Vmp = new VmpFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Vmp).commit();
         } else if (id == R.id.bicos) {

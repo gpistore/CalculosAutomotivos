@@ -22,6 +22,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:id="@+id/mainframe"></FrameLayout>
+            android:id="@+id/main">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mainframe"
+                android:fillViewport="false" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addframe"
+            android:layout_gravity="bottom|center_horizontal"></FrameLayout>
     </FrameLayout>
 </RelativeLayout>

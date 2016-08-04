@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,6 +37,8 @@ public class RlFragment extends Fragment implements View.OnTouchListener {
             @Override
             public void onClick(View v) {
                 calcular();
+                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(getContext().INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
             }
         });
 
@@ -45,11 +46,6 @@ public class RlFragment extends Fragment implements View.OnTouchListener {
 
 
         return view;
-    }
-
-    public static void hideKeyboardFrom(Context context, View view) {
-        InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
     public void onStart() {
@@ -66,19 +62,19 @@ public class RlFragment extends Fragment implements View.OnTouchListener {
         campo_rl = (TextView) view.findViewById(R.id.txtrl);
 
         if (campo_curso.getText().toString().length() == 0) {
-            campo_curso.setError("Preencha o Curso do Virabrequim!");
+            Toast.makeText(getContext(), "Preencha o Curso do Virabrequim!", Toast.LENGTH_LONG).show();
         } else {
 
             if (campo_comprimento.getText().toString().length() == 0) {
-                campo_comprimento.setError("Preencha o Comprimento das Bielas!");
+                Toast.makeText(getContext(), "Preencha o Comprimento das Bielas!", Toast.LENGTH_LONG).show();
             } else {
 
                 if (campo_diametro.getText().toString().length() == 0) {
-                    campo_diametro.setError("Preencha o Diâmetro do Pistão!");
+                    Toast.makeText(getContext(), "Preencha o Diâmetro do Pistão!", Toast.LENGTH_LONG).show();
                 } else {
 
                     if (campo_cilindros.getText().toString().length() == 0) {
-                        campo_cilindros.setError("Preencha a Quantidade de Cilindros!");
+                        Toast.makeText(getContext(), "Preencha a Quantidade de Cilindros!", Toast.LENGTH_LONG).show();
                     } else {
                         double cilindros = Double.valueOf(campo_cilindros.getText().toString());
                         double comp = Double.valueOf((campo_comprimento.getText().toString()));
