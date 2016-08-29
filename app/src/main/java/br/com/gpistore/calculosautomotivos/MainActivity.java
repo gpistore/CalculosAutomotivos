@@ -60,7 +60,34 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.cambio) {
 
+        }else if( id == R.id.btnmain){
+            MainFragment Main = new MainFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Main).commit();
         }
+
+        /*
+        * Como calcular a velocidade real (quase real na realidade) usando uma calculadora boqueta que vc ganha quando compra um barbeador:
+
+        Pneu: 185/60 R14
+        18,5 * 0,6 * 2 = 22,2 cm ( * 2 é pq o diâmetro do conjunto roda/pneu é perfil + roda + perfil, portando perfil * 2 )
+        Roda aro 14 polegadas
+        14 * 2,54 = 35,56 cm
+
+        22,2 + 35,56 = 57,76 cm de diâmetro
+
+        Circunferência do pneu: 57,76 * 3,1416 ( pi ) = 181,45 cm = 1,8145 m
+
+        Fórmula :
+        (Circ.do.pneu * RPM * 0,06) / (diferencial * marcha) = velocidade
+
+        (1,8145 * 3000 * 0,06) / ( 4,11 * 0,68 ) = 116,15 km/h
+
+        0,06 é um fator de conversão de m/min para km/h
+
+        a RPM vc utiliza a que vc quiser.... por exemplo: se quiser saber a velocidade do carro a 5500 RPM é só colocar este valor na fórmula... (para saber a velocidade máxima é só colocar a RPM em que se atinge a potência máxima do motor)
+        *
+        * */
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

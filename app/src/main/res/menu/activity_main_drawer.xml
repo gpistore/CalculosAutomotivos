@@ -18,6 +18,11 @@
             android:id="@+id/cambio"
             android:icon="@drawable/driving_gear_controls"
             android:title="Câmbio" />
+        <item
+            android:id="@+id/rodas"
+            android:icon="@drawable/driving_gear_controls"
+            android:title="Tamanho Rodas" />
+
     </group>
 
 

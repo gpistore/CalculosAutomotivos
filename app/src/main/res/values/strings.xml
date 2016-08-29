@@ -19,5 +19,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Curso_pistao">Curso do Pistão: </string>
+    <string name="rotacao_max">Rotação Máxima:</string>
+    <string name="VMP">VMP:</string>
 
 </resources>
