@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -56,14 +58,22 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.vmp) {
             VmpFragment Vmp = new VmpFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Vmp).commit();
-        } else if (id == R.id.bicos) {
+//        } else if (id == R.id.bicos) {
 
-        } else if (id == R.id.cambio) {
+//        } else if (id == R.id.cambio) {
 
-        }else if( id == R.id.btnmain){
-            MainFragment Main = new MainFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Main).commit();
         }
+
+        ImageView mainimg = (ImageView) findViewById(R.id.mainimg);
+        mainimg.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                MainFragment Main = new MainFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Main).commit();
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+
+            }
+        });
 
         /*
         * Como calcular a velocidade real (quase real na realidade) usando uma calculadora boqueta que vc ganha quando compra um barbeador:

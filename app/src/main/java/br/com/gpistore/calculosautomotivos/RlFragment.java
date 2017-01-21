@@ -1,7 +1,5 @@
 package br.com.gpistore.calculosautomotivos;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -21,7 +19,7 @@ import java.text.NumberFormat;
 public class RlFragment extends Fragment implements View.OnTouchListener {
     View view;
     EditText campo_cilindros, campo_diametro, campo_comprimento, campo_curso;
-    TextView campo_cilindrada, campo_rl;
+    TextView campo_valor_cilindrada, campo_valor_rl,campo_nome_rl,campo_nome_cilindrada;
     Button btncalcular;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -58,8 +56,10 @@ public class RlFragment extends Fragment implements View.OnTouchListener {
         NumberFormat mascara_cil = new DecimalFormat("#.##");
         NumberFormat mascara_rl = new DecimalFormat("#.###");
 
-        campo_cilindrada = (TextView) view.findViewById(R.id.txtcilindrada);
-        campo_rl = (TextView) view.findViewById(R.id.txtrl);
+        campo_valor_cilindrada = (TextView) view.findViewById(R.id.txtvalorcilindrada);
+        campo_valor_rl = (TextView) view.findViewById(R.id.txtvalorrl);
+        campo_nome_rl = (TextView) view.findViewById(R.id.txtnomerl);
+        campo_nome_cilindrada = (TextView) view.findViewById(R.id.txtnomecilindrada);
 
         if (campo_curso.getText().toString().length() == 0) {
             Toast.makeText(getContext(), "Preencha o Curso do Virabrequim!", Toast.LENGTH_LONG).show();
@@ -87,15 +87,14 @@ public class RlFragment extends Fragment implements View.OnTouchListener {
 
                         double PI = 3.14159265359;
                         double cilindrada = ((((PI * (diam * diam)) / 4) * curso) * cilindros) / 1000;
-
-                        campo_cilindrada.setText(mascara_cil.format(cilindrada));
-                        campo_rl.setText(mascara_rl.format(RL));
-
+                        campo_valor_cilindrada.setText(mascara_cil.format(cilindrada));
+                        campo_valor_rl.setText(mascara_rl.format(RL));
+                        campo_nome_cilindrada.setText("Cilindrada:  ");
+                        campo_nome_rl.setText("R/L:  ");
                     }
                 }
             }
         }
-
     }
 
     @Override

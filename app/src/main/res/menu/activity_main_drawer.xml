@@ -10,18 +10,18 @@
             android:id="@+id/vmp"
             android:icon="@drawable/pistons_cross"
             android:title="Velocidade Média de Pistão" />
-        <item
-            android:id="@+id/bicos"
-            android:icon="@drawable/car_repair_check_list"
-            android:title="Bicos" />
-        <item
-            android:id="@+id/cambio"
-            android:icon="@drawable/driving_gear_controls"
-            android:title="Câmbio" />
-        <item
-            android:id="@+id/rodas"
-            android:icon="@drawable/driving_gear_controls"
-            android:title="Tamanho Rodas" />
+        <!--<item-->
+            <!--android:id="@+id/bicos"-->
+            <!--android:icon="@drawable/car_repair_check_list"-->
+            <!--android:title="Bicos" />-->
+        <!--<item-->
+            <!--android:id="@+id/cambio"-->
+            <!--android:icon="@drawable/driving_gear_controls"-->
+            <!--android:title="Câmbio" />-->
+        <!--<item-->
+            <!--android:id="@+id/rodas"-->
+            <!--android:icon="@drawable/driving_gear_controls"-->
+            <!--android:title="Tamanho Rodas" />-->
 
     </group>
 

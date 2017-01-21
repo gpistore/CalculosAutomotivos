@@ -23,7 +23,7 @@ import java.text.NumberFormat;
 public class VmpFragment extends Fragment implements View.OnTouchListener {
         View view;
         EditText campo_curso, campo_rotacao;
-        TextView campo_vmp;
+        TextView campo_valor_vmp,campo_nome_vmp;
         Button btncalcular;
 
 
@@ -60,7 +60,8 @@ public class VmpFragment extends Fragment implements View.OnTouchListener {
     public void calcular(){
         NumberFormat mascara_vmp = new DecimalFormat("#.##");
 
-        campo_vmp = (TextView) view.findViewById(R.id.txtvmp);
+        campo_valor_vmp = (TextView) view.findViewById(R.id.txtvalorvmp);
+        campo_nome_vmp = (TextView) view.findViewById(R.id.txtnmvmp);
 
         if (campo_curso.getText().toString().length() == 0) {
             Toast.makeText(getContext(), "Preencha o Curso do Pistão!", Toast.LENGTH_LONG).show();
@@ -75,7 +76,8 @@ public class VmpFragment extends Fragment implements View.OnTouchListener {
                 double vmp = (curso * rotacao) / 30000;
 
 
-                campo_vmp.setText(mascara_vmp.format(vmp) + " m/s");
+                campo_valor_vmp.setText(mascara_vmp.format(vmp) + " m/s");
+                campo_nome_vmp.setText("VMP: ");
 
             }
 

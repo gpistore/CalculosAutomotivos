@@ -13,7 +13,7 @@
     android:id="@+id/btnmain">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/mainimg"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="@string/app_name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:id="@+id/txtmain" />
 
 </LinearLayout>
