@@ -1,26 +1,66 @@
 <resources>
+    <!--Títulos-->
     <string name="app_name">Cálculos Automotivos</string>
-
     <string name="navigation_drawer_open">Abrir Aba de Navegação</string>
     <string name="navigation_drawer_close">Fechar Aba de Navegação</string>
-
+    <!--Campos-->
     <string name="Curso_vira">Curso do Virabrequim: </string>
     <string name="Comprimento_bielas">Comprimento das Bielas: </string>
     <string name="Diametro">Diâmetro: </string>
     <string name="num_cil">Nº de Cilindros: </string>
     <string name="RL">R/L: </string>
     <string name="cilindrada">Cilindrada: </string>
-
+    <string name="Curso_pistao">Curso do Pistão: </string>
+    <string name="rotacao_max">Rotação Máxima: </string>
+    <string name="VMP">VMP: </string>
+    <string name="roda1">Roda 1</string>
+    <string name="largura">Largura: </string>
+    <string name="altura">Altura: </string>
+    <string name="aro">Aro: </string>
+    <string name="roda2">Roda 2</string>
+    <string name="Rodas">Rodas</string>
+    <string name="Rel_Cambio">Relação de Câmbio</string>
+    <string name="primeira">1ª: </string>
+    <string name="segunda">2ª: </string>
+    <string name="terceira">3ª: </string>
+    <string name="quarta">4ª: </string>
+    <string name="quinta">5ª: </string>
+    <string name="sexta">6ª: </string>
+    <string name="Diferencial">Diferencial: </string>
+    <string name="rotacao_maxima">Rotação Máxima: </string>
+    <!--Avisos-->
     <string name="erro_vira">Preencha o Curso do Virabrequim!</string>
     <string name="erro_diam">Preencha o Diâmetro do Pistão!</string>
     <string name="erro_bielas">Preencha o Comprimento das Bielas!</string>
     <string name="erro_cilindros">Preencha a Quantidade de Cilindros!</string>
+    <string name="erro_curso_pistao">Preencha o Curso do Pistão!</string>
+    <string name="erro_rotacao">Preencha a Rotação Máxima!</string>
+    <string name="erro_largura1">Preencha o Campo Largura da Roda 1!</string>
+    <string name="erro_largura2">Preencha o Campo Largura da Roda 2!</string>
+    <string name="erro_largura">Preencha o Campo Largura!</string>
+    <string name="erro_altura1">Preencha o Campo Altura da Roda 1!</string>
+    <string name="erro_altura2">Preencha o Campo Altura da Roda 2!</string>
+    <string name="erro_altura">Preencha o Campo Altura!</string>
+    <string name="erro_aro1">Preencha o Campo Aro da Roda 1!</string>
+    <string name="erro_aro2">Preencha o Campo Aro da Roda 2!</string>
+    <string name="erro_aro">Preencha o Campo Aro!</string>
+    <string name="erro_pri">Preencha o Campo 1ª!</string>
+    <string name="erro_seg">Preencha o Campo 2ª!</string>
+    <string name="erro_ter">Preencha o Campo 3ª!</string>
+    <string name="erro_qua">Preencha o Campo 4ª!</string>
+    <string name="erro_qui">Preencha o Campo 5ª!</string>
+    <string name="erro_sex">Preencha o Campo 6ª!</string>
+    <string name="erro_dif">Preencha o Campo Diferencial!</string>
+    <!--Botões-->
     <string name="botao_calcular">Calcular</string>
-
+<!--Textos-->
+    <string name="resultado_velocidade">Velocidade Máxima</string>
+    <string name="calculo_cambio">Cálculo Câmbio</string>
+    <string name="tamanho_rodas">Tamanho Rodas</string>
+    <string name="calculo_rl">R/L e Cilindrada</string>
+    <string name="calculo_vmp">Velocidade Média do Pistão</string>
+    <string name="texto_inicial">Escolha o Cálculo que deseja</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="Curso_pistao">Curso do Pistão: </string>
-    <string name="rotacao_max">Rotação Máxima:</string>
-    <string name="VMP">VMP:</string>
+
 
 </resources>

@@ -62,19 +62,19 @@ public class RlFragment extends Fragment implements View.OnTouchListener {
         campo_nome_cilindrada = (TextView) view.findViewById(R.id.txtnomecilindrada);
 
         if (campo_curso.getText().toString().length() == 0) {
-            Toast.makeText(getContext(), "Preencha o Curso do Virabrequim!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), getString(R.string.erro_vira), Toast.LENGTH_LONG).show();
         } else {
 
             if (campo_comprimento.getText().toString().length() == 0) {
-                Toast.makeText(getContext(), "Preencha o Comprimento das Bielas!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), getString(R.string.erro_bielas), Toast.LENGTH_LONG).show();
             } else {
 
                 if (campo_diametro.getText().toString().length() == 0) {
-                    Toast.makeText(getContext(), "Preencha o Diâmetro do Pistão!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), getString(R.string.erro_bielas), Toast.LENGTH_LONG).show();
                 } else {
 
                     if (campo_cilindros.getText().toString().length() == 0) {
-                        Toast.makeText(getContext(), "Preencha a Quantidade de Cilindros!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getContext(), getString(R.string.erro_cilindros), Toast.LENGTH_LONG).show();
                     } else {
                         double cilindros = Double.valueOf(campo_cilindros.getText().toString());
                         double comp = Double.valueOf((campo_comprimento.getText().toString()));
@@ -89,8 +89,8 @@ public class RlFragment extends Fragment implements View.OnTouchListener {
                         double cilindrada = ((((PI * (diam * diam)) / 4) * curso) * cilindros) / 1000;
                         campo_valor_cilindrada.setText(mascara_cil.format(cilindrada));
                         campo_valor_rl.setText(mascara_rl.format(RL));
-                        campo_nome_cilindrada.setText("Cilindrada:  ");
-                        campo_nome_rl.setText("R/L:  ");
+                        campo_nome_cilindrada.setText(getString(R.string.cilindrada));
+                        campo_nome_rl.setText(getString(R.string.RL));
                     }
                 }
             }

@@ -64,11 +64,11 @@ public class VmpFragment extends Fragment implements View.OnTouchListener {
         campo_nome_vmp = (TextView) view.findViewById(R.id.txtnmvmp);
 
         if (campo_curso.getText().toString().length() == 0) {
-            Toast.makeText(getContext(), "Preencha o Curso do Pistão!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(),getString(R.string.erro_curso_pistao), Toast.LENGTH_LONG).show();
         } else {
 
             if (campo_rotacao.getText().toString().length() == 0) {
-                Toast.makeText(getContext(), "Preencha a Rotação Máxima!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), getString(R.string.erro_rotacao), Toast.LENGTH_LONG).show();
             } else {
                 double rotacao = Double.valueOf(campo_rotacao.getText().toString());
                 double curso = Double.valueOf((campo_curso.getText().toString()));
@@ -77,7 +77,7 @@ public class VmpFragment extends Fragment implements View.OnTouchListener {
 
 
                 campo_valor_vmp.setText(mascara_vmp.format(vmp) + " m/s");
-                campo_nome_vmp.setText("VMP: ");
+                campo_nome_vmp.setText(getString(R.string.VMP));
 
             }
 

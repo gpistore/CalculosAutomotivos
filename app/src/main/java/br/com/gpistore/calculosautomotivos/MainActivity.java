@@ -1,6 +1,5 @@
 package br.com.gpistore.calculosautomotivos;
 
-import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -8,7 +7,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -23,7 +21,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FragmentManager fm = getFragmentManager();
         MainFragment Main = new MainFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Main).commit();
 
@@ -58,10 +55,13 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.vmp) {
             VmpFragment Vmp = new VmpFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Vmp).commit();
-//        } else if (id == R.id.bicos) {
-
-//        } else if (id == R.id.cambio) {
-
+        } else if (id == R.id.rodas) {
+            RodaFragment Roda = new RodaFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Roda).commit();
+//      } else if (id == R.id.bicos) {
+        } else if (id == R.id.cambio) {
+            CambioFragment cambio = new CambioFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, cambio).commit();
         }
 
         ImageView mainimg = (ImageView) findViewById(R.id.mainimg);
@@ -97,8 +97,6 @@ public class MainActivity extends AppCompatActivity
         a RPM vc utiliza a que vc quiser.... por exemplo: se quiser saber a velocidade do carro a 5500 RPM é só colocar este valor na fórmula... (para saber a velocidade máxima é só colocar a RPM em que se atinge a potência máxima do motor)
         *
         * */
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
