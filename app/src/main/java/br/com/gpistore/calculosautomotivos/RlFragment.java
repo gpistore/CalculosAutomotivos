@@ -1,5 +1,6 @@
 package br.com.gpistore.calculosautomotivos;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -91,6 +92,8 @@ public class RlFragment extends Fragment implements View.OnTouchListener {
                         campo_valor_rl.setText(mascara_rl.format(RL));
                         campo_nome_cilindrada.setText(getString(R.string.cilindrada));
                         campo_nome_rl.setText(getString(R.string.RL));
+
+
                     }
                 }
             }

@@ -25,6 +25,8 @@ public class MainFragment extends Fragment {
 
         ImageView imgrl = (ImageView) view.findViewById(R.id.imgrl);
         ImageView imgvmp = (ImageView) view.findViewById(R.id.imgvmp);
+        ImageView imgcambio = (ImageView) view.findViewById(R.id.imgcambio);
+        ImageView imgrodas = (ImageView) view.findViewById(R.id.imgrodas);
 
         imgrl.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -36,6 +38,18 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 VmpFragment VMP = new VmpFragment();
                 getFragmentManager().beginTransaction().replace(R.id.mainframe, VMP).commit();
+            }
+        });
+        imgcambio.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                CambioFragment cambio = new CambioFragment();
+                getFragmentManager().beginTransaction().replace(R.id.mainframe, cambio).commit();
+            }
+        });
+        imgrodas.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                RodaFragment Roda = new RodaFragment();
+                getFragmentManager().beginTransaction().replace(R.id.mainframe, Roda).commit();
             }
         });
 

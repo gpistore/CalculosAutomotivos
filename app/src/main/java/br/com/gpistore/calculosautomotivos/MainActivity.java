@@ -11,8 +11,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    InterstitialAd mInterstitialAd;
+    boolean click = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +30,20 @@ public class MainActivity extends AppCompatActivity
         MainFragment Main = new MainFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Main).commit();
 
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-2664724094770763/3644317232");
+        requestNewInterstitial();
+        mInterstitialAd.setAdListener(new AdListener() {
+            //@Override
+            public void onAdClosed() {
+                requestNewInterstitial();
+            }
+        });
+
+
+
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
         this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -32,6 +52,16 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+    }
+
+    private void requestNewInterstitial() {
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("3E57B5136D19E0854E00586D5E6A581A")
+                .build();
+
+        mInterstitialAd.loadAd(adRequest);
     }
 
     @Override
@@ -52,51 +82,59 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.rl) {
             RlFragment RL = new RlFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, RL).commit();
+            if (mInterstitialAd.isLoaded() && click == true ) {
+                mInterstitialAd.show();
+                click = false;
+            }else{
+                click = true;
+            }
         } else if (id == R.id.vmp) {
             VmpFragment Vmp = new VmpFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Vmp).commit();
+            if (mInterstitialAd.isLoaded() && click == true) {
+                mInterstitialAd.show();
+                click = false;
+            }else{
+                click = true;
+            }
         } else if (id == R.id.rodas) {
             RodaFragment Roda = new RodaFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Roda).commit();
+            if (mInterstitialAd.isLoaded() && click == true)  {
+                mInterstitialAd.show();
+                click = false;
+            }else{
+                click = true;
+            }
 //      } else if (id == R.id.bicos) {
         } else if (id == R.id.cambio) {
             CambioFragment cambio = new CambioFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, cambio).commit();
+            if (mInterstitialAd.isLoaded() && click == true) {
+                mInterstitialAd.show();
+                click = false;
+            }else{
+                click = true;
+            }
         }
 
         ImageView mainimg = (ImageView) findViewById(R.id.mainimg);
         mainimg.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                MainFragment Main = new MainFragment();
+                   MainFragment Main = new MainFragment();
                 getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Main).commit();
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                 drawer.closeDrawer(GravityCompat.START);
+                if (mInterstitialAd.isLoaded() && click == true) {
+                    mInterstitialAd.show();
+                    click = false;
+                }else{
+                    click = true;
+                }
 
             }
         });
 
-        /*
-        * Como calcular a velocidade real (quase real na realidade) usando uma calculadora boqueta que vc ganha quando compra um barbeador:
-
-        Pneu: 185/60 R14
-        18,5 * 0,6 * 2 = 22,2 cm ( * 2 é pq o diâmetro do conjunto roda/pneu é perfil + roda + perfil, portando perfil * 2 )
-        Roda aro 14 polegadas
-        14 * 2,54 = 35,56 cm
-
-        22,2 + 35,56 = 57,76 cm de diâmetro
-
-        Circunferência do pneu: 57,76 * 3,1416 ( pi ) = 181,45 cm = 1,8145 m
-
-        Fórmula :
-        (Circ.do.pneu * RPM * 0,06) / (diferencial * marcha) = velocidade
-
-        (1,8145 * 3000 * 0,06) / ( 4,11 * 0,68 ) = 116,15 km/h
-
-        0,06 é um fator de conversão de m/min para km/h
-
-        a RPM vc utiliza a que vc quiser.... por exemplo: se quiser saber a velocidade do carro a 5500 RPM é só colocar este valor na fórmula... (para saber a velocidade máxima é só colocar a RPM em que se atinge a potência máxima do motor)
-        *
-        * */
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
