@@ -1,5 +1,6 @@
 package br.com.gpistore.calculosautomotivos;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -92,9 +93,12 @@ public class RodaFragment extends Fragment implements View.OnTouchListener {
                                 double dif = (diam2 - diam1)*100/diam1;
 
 
-                                campo_valor_roda1.setText("Diâmetro 1: "+mascara_diametro.format(diam1)+" cm");
-                                campo_valor_roda2.setText("Diâmetro 2: "+mascara_diametro.format(diam2)+" cm");
-                                campo_valor_diferenca.setText("Diferença: "+mascara_diferenca.format(dif)+"%");
+                                campo_valor_roda1.setText(getString(R.string.diam_original)+" "+mascara_diametro.format(diam1)+" cm");
+                                campo_valor_roda2.setText(getString(R.string.diam_alterado)+" "+mascara_diametro.format(diam2)+" cm");
+                                campo_valor_diferenca.setText(getString(R.string.diferenca)+" "+mascara_diferenca.format(dif)+"%");
+                                if (dif > 5.0){
+                                    campo_valor_diferenca.setTextColor(Color.RED);
+                                }
 
                             }
                         }

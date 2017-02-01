@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <!--Revisar botão que aparece como escolhido quando selecionado algum calculo pela pag inicial -->
     <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_none"
+            android:title=""
+            android:visible="false"/>
         <item
             android:id="@+id/rl"
             android:icon="@drawable/bicycle_sprockets"
@@ -10,10 +15,10 @@
             android:id="@+id/vmp"
             android:icon="@drawable/pistons_cross"
             android:title="@string/calculo_vmp" />
-        <!--<item-->
-            <!--android:id="@+id/bicos"-->
-            <!--android:icon="@drawable/car_repair_check_list"-->
-            <!--android:title="Bicos" />-->
+        <item
+            android:id="@+id/bicos"
+            android:icon="@drawable/bico"
+            android:title="@string/bicos" />
         <item
             android:id="@+id/cambio"
             android:icon="@drawable/driving_gear_controls"
@@ -22,6 +27,10 @@
             android:id="@+id/rodas"
             android:icon="@drawable/cart_wheel"
             android:title="@string/tamanho_rodas" />
+        <item
+            android:id="@+id/taxa"
+            android:icon="@drawable/taxa"
+            android:title="@string/taxa" />
 
     </group>
 

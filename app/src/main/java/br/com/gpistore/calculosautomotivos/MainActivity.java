@@ -10,21 +10,22 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     InterstitialAd mInterstitialAd;
     boolean click = true;
-
+    public Toolbar toolbar;
+    public NavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         MainFragment Main = new MainFragment();
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
 
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.rl) {
             RlFragment RL = new RlFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, RL).commit();
+            toolbar.setTitle(R.string.calculo_rl);
             if (mInterstitialAd.isLoaded() && click == true ) {
                 mInterstitialAd.show();
                 click = false;
@@ -91,6 +93,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.vmp) {
             VmpFragment Vmp = new VmpFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Vmp).commit();
+            toolbar.setTitle(R.string.calculo_vmp);
             if (mInterstitialAd.isLoaded() && click == true) {
                 mInterstitialAd.show();
                 click = false;
@@ -100,29 +103,55 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.rodas) {
             RodaFragment Roda = new RodaFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Roda).commit();
+            toolbar.setTitle(R.string.tamanho_rodas);
+
             if (mInterstitialAd.isLoaded() && click == true)  {
                 mInterstitialAd.show();
                 click = false;
             }else{
                 click = true;
             }
-//      } else if (id == R.id.bicos) {
-        } else if (id == R.id.cambio) {
-            CambioFragment cambio = new CambioFragment();
-            getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, cambio).commit();
+          } else if (id == R.id.bicos) {
+            BicosFragment bicos = new BicosFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, bicos).commit();
+            toolbar.setTitle(R.string.bicos);
             if (mInterstitialAd.isLoaded() && click == true) {
                 mInterstitialAd.show();
                 click = false;
             }else{
                 click = true;
             }
-        }
+        } else if (id == R.id.cambio) {
+            CambioFragment cambio = new CambioFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, cambio).commit();
+            toolbar.setTitle(R.string.calculo_cambio);
+            if (mInterstitialAd.isLoaded() && click == true) {
+                mInterstitialAd.show();
+                click = false;
+            } else {
+                click = true;
+            }
+
+        }else if (id == R.id.taxa) {
+                TaxaFragment taxa = new TaxaFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, taxa).commit();
+                toolbar.setTitle(R.string.taxa);
+                if (mInterstitialAd.isLoaded() && click == true) {
+                    mInterstitialAd.show();
+                    click = false;
+                }else{
+                    click = true;
+                }
+            }
+
 
         ImageView mainimg = (ImageView) findViewById(R.id.mainimg);
         mainimg.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                    MainFragment Main = new MainFragment();
                 getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Main).commit();
+                toolbar.setTitle(R.string.app_name);
+                navigationView.setCheckedItem(R.id.item_none);
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                 drawer.closeDrawer(GravityCompat.START);
                 if (mInterstitialAd.isLoaded() && click == true) {

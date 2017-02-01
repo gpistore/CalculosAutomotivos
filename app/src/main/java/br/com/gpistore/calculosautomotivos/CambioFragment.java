@@ -113,7 +113,7 @@ public class CambioFragment extends Fragment implements View.OnTouchListener {
                                                     double circ = ((((larg/10)*(alt/100)*2) + (aro * 2.54))/100)* 3.14159265359;
                                                     double cons = circ * rotacao * 0.06;
 
-                                                    double vel_pri = cons/ (dif*pri);
+                                                    double vel_pri =    cons/ (dif*pri);
                                                     double vel_seg = cons/ (dif*seg);
                                                     double vel_ter = cons/ (dif*ter);
                                                     double vel_qua = cons/ (dif*qua);

@@ -1,23 +1,28 @@
 <resources>
     <!--Títulos-->
-    <string name="app_name">Cálculos Automotivos</string>
+    <string name="app_name">Calculadora Automotiva</string>
     <string name="navigation_drawer_open">Abrir Aba de Navegação</string>
     <string name="navigation_drawer_close">Fechar Aba de Navegação</string>
+    <string name="calculo_cambio">Cálculo Câmbio</string>
+    <string name="tamanho_rodas">Tamanho Rodas</string>
+    <string name="calculo_rl">R/L e Cilindrada</string>
+    <string name="calculo_vmp">Velocidade Média do Pistão</string>
+    <string name="bicos">Bicos Injetores</string>
+    <string name="taxa">Taxa de Compressão</string>
+
     <!--Campos-->
-    <string name="Curso_vira">Curso do Virabrequim: </string>
-    <string name="Comprimento_bielas">Comprimento das Bielas: </string>
-    <string name="Diametro">Diâmetro: </string>
+    <string name="Curso_vira">Curso do Virabrequim(mm): </string>
+    <string name="Comprimento_bielas">Comprimento das Bielas(mm): </string>
+    <string name="Diametro">Diâmetro(mm): </string>
     <string name="num_cil">Nº de Cilindros: </string>
     <string name="RL">R/L: </string>
     <string name="cilindrada">Cilindrada: </string>
-    <string name="Curso_pistao">Curso do Pistão: </string>
-    <string name="rotacao_max">Rotação Máxima: </string>
+    <string name="Curso_pistao">Curso do Pistão(mm): </string>
+    <string name="rotacao_max">Rotação Máxima(rpm): </string>
     <string name="VMP">VMP: </string>
-    <string name="roda1">Roda 1</string>
-    <string name="largura">Largura: </string>
-    <string name="altura">Altura: </string>
-    <string name="aro">Aro: </string>
-    <string name="roda2">Roda 2</string>
+    <string name="roda1">Roda Original</string>
+    <string name="medida">Medida: </string>
+    <string name="roda2">Roda Alterada</string>
     <string name="Rodas">Rodas</string>
     <string name="Rel_Cambio">Relação de Câmbio</string>
     <string name="primeira">1ª: </string>
@@ -27,7 +32,21 @@
     <string name="quinta">5ª: </string>
     <string name="sexta">6ª: </string>
     <string name="Diferencial">Diferencial: </string>
-    <string name="rotacao_maxima">Rotação Máxima: </string>
+    <string name="rotacao_maxima">Rotação Máxima(rpm): </string>
+    <string name="potencia">Potência(cv):</string>
+    <string name="injetores">Número de Injetores: </string>
+    <string name="tipo_motor">Tipo de Motor: </string>
+    <string name="combustivel">Combustível: </string>
+    <string name="capacidade">Capacidade Utilizada: </string>
+    <string name="ccmin">CC/Min: </string>
+    <string name="lbhr">Lb/Hr: </string>
+    <string name="volume_domo">Volume do domo</string>
+    <string name="volume_cava">Volume das cavas</string>
+    <string name="comb1">Álcool</string>
+    <string name="comb2">Gasolina</string>
+    <string name="comb3">Metanol</string>
+    <string name="tipo1">Aspirado</string>
+    <string name="tipo2">Turbo</string>
     <!--Avisos-->
     <string name="erro_vira">Preencha o Curso do Virabrequim!</string>
     <string name="erro_diam">Preencha o Diâmetro do Pistão!</string>
@@ -35,14 +54,14 @@
     <string name="erro_cilindros">Preencha a Quantidade de Cilindros!</string>
     <string name="erro_curso_pistao">Preencha o Curso do Pistão!</string>
     <string name="erro_rotacao">Preencha a Rotação Máxima!</string>
-    <string name="erro_largura1">Preencha o Campo Largura da Roda 1!</string>
-    <string name="erro_largura2">Preencha o Campo Largura da Roda 2!</string>
+    <string name="erro_largura1">Preencha a Largura da Roda Original!</string>
+    <string name="erro_largura2">Preencha a Largura da Roda Alterada!</string>
     <string name="erro_largura">Preencha o Campo Largura!</string>
-    <string name="erro_altura1">Preencha o Campo Altura da Roda 1!</string>
-    <string name="erro_altura2">Preencha o Campo Altura da Roda 2!</string>
-    <string name="erro_altura">Preencha o Campo Altura!</string>
-    <string name="erro_aro1">Preencha o Campo Aro da Roda 1!</string>
-    <string name="erro_aro2">Preencha o Campo Aro da Roda 2!</string>
+    <string name="erro_altura1">Preencha a Altura da Roda Original!</string>
+    <string name="erro_altura2">Preencha a Altura da Roda Alterada!</string>
+    <string name="erro_altura">Preencha a Altura da roda!</string>
+    <string name="erro_aro1">Preencha o Aro da Roda Original!</string>
+    <string name="erro_aro2">Preencha o Aro da Roda Alterada!</string>
     <string name="erro_aro">Preencha o Campo Aro!</string>
     <string name="erro_pri">Preencha o Campo 1ª!</string>
     <string name="erro_seg">Preencha o Campo 2ª!</string>
@@ -51,16 +70,30 @@
     <string name="erro_qui">Preencha o Campo 5ª!</string>
     <string name="erro_sex">Preencha o Campo 6ª!</string>
     <string name="erro_dif">Preencha o Campo Diferencial!</string>
+    <string name="erro_potencia">Preencha o Campo Potência!</string>
+    <string name="erro_injetores">Preencha o Campo Número de Injetores!</string>
     <!--Botões-->
     <string name="botao_calcular">Calcular</string>
-<!--Textos-->
+    <!--Textos-->
     <string name="resultado_velocidade">Velocidade Máxima</string>
-    <string name="calculo_cambio">Cálculo Câmbio</string>
-    <string name="tamanho_rodas">Tamanho Rodas</string>
-    <string name="calculo_rl">R/L e Cilindrada</string>
-    <string name="calculo_vmp">Velocidade Média do Pistão</string>
     <string name="texto_inicial">Escolha o Cálculo que deseja</string>
+
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="tipo_pistao">Tipo de Pistão</string>
+    <string name="volume_camara">Volume da câmara</string>
+    <string name="espessura_junta">Espessura da junta(mm)</string>
+    <string name="concavo">Concavo</string>
+    <string name="plano">Plano</string>
+    <string name="domo">Com domo</string>
+
+    <string name="erro_volume_camara">Preencha o Campo Volume da câmara!</string>
+    <string name="erro_espessura_junta">Preencha o Campo Espessura da Junta!</string>
+    <string name="erro_volume_domo">Preencha o Campo Volume do Domo!</string>
+    <string name="erro_volume_cava">Preencha o Campo Volume das cavas!</string>
+
+    <string name="diam_original">Diâmetro Original: </string>
+    <string name="diam_alterado">Diâmetro Alterado: </string>
+    <string name="diferenca">Diferença:</string>
 
 
 </resources>

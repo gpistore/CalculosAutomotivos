@@ -136,17 +136,21 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/txtnomecilindrada"
                     android:layout_weight="1"
-                    android:textAppearance="@android:style/TextAppearance.Material.Large"
-                    android:textAlignment="textEnd" />
+                    android:textAppearance="@android:style/TextAppearance.Large"
+                    android:textAlignment="viewEnd" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtvalorcilindrada"
                     android:layout_weight="1"
-                    android:textAppearance="@android:style/TextAppearance.Material.Large"
-                    android:textAlignment="textStart" />
+                    android:textAppearance="@android:style/TextAppearance.Large"
+                    android:textAlignment="viewStart" />
             </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -160,16 +164,16 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/txtnomerl"
                     android:layout_weight="1"
-                    android:textAppearance="@android:style/TextAppearance.Material.Large"
-                    android:textAlignment="textEnd" />
+                    android:textAppearance="@android:style/TextAppearance.Large"
+                    android:textAlignment="viewEnd" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtvalorrl"
                     android:layout_weight="1"
-                    android:textAppearance="@android:style/TextAppearance.Material.Large"
-                    android:textAlignment="textStart" />
+                    android:textAppearance="@android:style/TextAppearance.Large"
+                    android:textAlignment="viewStart" />
             </LinearLayout>
 
         </LinearLayout>

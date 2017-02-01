@@ -24,45 +24,44 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="@string/largura"
-                android:layout_width="53dp"
+                android:text="@string/medida"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView18" />
 
             <EditText
-                android:layout_width="68dp"
+                android:layout_width="54dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/txtnmlargura" />
 
             <TextView
-                android:text="@string/altura"
+                android:text="/"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView19"
                 android:textAlignment="textEnd" />
 
             <EditText
-                android:layout_width="68dp"
+                android:layout_width="59dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
                 android:id="@+id/txtnmaltura" />
 
             <TextView
-                android:text="@string/aro"
+                android:text="R"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView20" />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="82dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:id="@+id/txtnmaro"
-                android:layout_weight="1" />
+                android:id="@+id/txtnmaro" />
         </LinearLayout>
 
         <TextView
@@ -223,10 +222,16 @@
             android:layout_height="wrap_content"
             android:id="@+id/btncalcular" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/txtvalorcambio" />
+            android:id="@+id/txtvalorcambio"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textAlignment="center" />
 
     </LinearLayout>
 
