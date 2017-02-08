@@ -31,6 +31,11 @@
             android:id="@+id/taxa"
             android:icon="@drawable/taxa"
             android:title="@string/taxa" />
+        <item
+            android:id="@+id/configuracoes"
+            android:icon="@drawable/config"
+            android:title="@string/config" />
+
 
     </group>
 

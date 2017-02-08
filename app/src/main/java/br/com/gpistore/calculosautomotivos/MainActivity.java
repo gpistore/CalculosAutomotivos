@@ -17,9 +17,8 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    InterstitialAd mInterstitialAd;
-    boolean click = true;
     public Toolbar toolbar;
+    Propaganda prop;
     public NavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,20 +26,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+         prop = new Propaganda(this);
         MainFragment Main = new MainFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Main).commit();
 
 
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-2664724094770763/3644317232");
-        requestNewInterstitial();
-        mInterstitialAd.setAdListener(new AdListener() {
-            //@Override
-            public void onAdClosed() {
-                requestNewInterstitial();
-            }
-        });
+
+
 
 
 
@@ -57,13 +49,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    private void requestNewInterstitial() {
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice("3E57B5136D19E0854E00586D5E6A581A")
-                .build();
 
-        mInterstitialAd.loadAd(adRequest);
-    }
 
     @Override
     public void onBackPressed() {
@@ -84,66 +70,39 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             RlFragment RL = new RlFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, RL).commit();
             toolbar.setTitle(R.string.calculo_rl);
-            if (mInterstitialAd.isLoaded() && click == true ) {
-                mInterstitialAd.show();
-                click = false;
-            }else{
-                click = true;
-            }
+            prop.mostra();
         } else if (id == R.id.vmp) {
             VmpFragment Vmp = new VmpFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Vmp).commit();
             toolbar.setTitle(R.string.calculo_vmp);
-            if (mInterstitialAd.isLoaded() && click == true) {
-                mInterstitialAd.show();
-                click = false;
-            }else{
-                click = true;
-            }
+            prop.mostra();
         } else if (id == R.id.rodas) {
             RodaFragment Roda = new RodaFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Roda).commit();
             toolbar.setTitle(R.string.tamanho_rodas);
-
-            if (mInterstitialAd.isLoaded() && click == true)  {
-                mInterstitialAd.show();
-                click = false;
-            }else{
-                click = true;
-            }
+            prop.mostra();
           } else if (id == R.id.bicos) {
             BicosFragment bicos = new BicosFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, bicos).commit();
             toolbar.setTitle(R.string.bicos);
-            if (mInterstitialAd.isLoaded() && click == true) {
-                mInterstitialAd.show();
-                click = false;
-            }else{
-                click = true;
-            }
+            prop.mostra();
         } else if (id == R.id.cambio) {
             CambioFragment cambio = new CambioFragment();
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, cambio).commit();
             toolbar.setTitle(R.string.calculo_cambio);
-            if (mInterstitialAd.isLoaded() && click == true) {
-                mInterstitialAd.show();
-                click = false;
-            } else {
-                click = true;
-            }
+            prop.mostra();
 
         }else if (id == R.id.taxa) {
                 TaxaFragment taxa = new TaxaFragment();
                 getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, taxa).commit();
                 toolbar.setTitle(R.string.taxa);
-                if (mInterstitialAd.isLoaded() && click == true) {
-                    mInterstitialAd.show();
-                    click = false;
-                }else{
-                    click = true;
-                }
-            }
-
+            prop.mostra();
+         }else if (id == R.id.configuracoes) {
+            ConfigFragment config = new ConfigFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, config).commit();
+            toolbar.setTitle(R.string.config);
+            prop.mostra();
+        }
 
         ImageView mainimg = (ImageView) findViewById(R.id.mainimg);
         mainimg.setOnClickListener(new View.OnClickListener() {
@@ -154,12 +113,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 navigationView.setCheckedItem(R.id.item_none);
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                 drawer.closeDrawer(GravityCompat.START);
-                if (mInterstitialAd.isLoaded() && click == true) {
-                    mInterstitialAd.show();
-                    click = false;
-                }else{
-                    click = true;
-                }
+                prop.mostra();
 
             }
         });

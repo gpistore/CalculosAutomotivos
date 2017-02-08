@@ -1,6 +1,7 @@
 package br.com.gpistore.calculosautomotivos;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -57,7 +58,7 @@ public class MainFragment extends Fragment {
         });
         imgrodas.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                RodaFragment Roda = new RodaFragment();
+                    RodaFragment Roda = new RodaFragment();
                 getFragmentManager().beginTransaction().replace(R.id.mainframe, Roda).commit();
                 navigationView.setCheckedItem(R.id.rodas);
                 toolbar.setTitle(R.string.tamanho_rodas);
