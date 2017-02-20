@@ -62,13 +62,13 @@ public class RlFragment extends Fragment implements View.OnTouchListener {
         campo_nome_rl = (TextView) view.findViewById(R.id.txtnomerl);
         campo_nome_cilindrada = (TextView) view.findViewById(R.id.txtnomecilindrada);
 
-        if (campo_curso.getText().toString().length() == 0) {
-            Toast.makeText(getContext(), getString(R.string.erro_vira), Toast.LENGTH_LONG).show();
-        } else {
-
-            if (campo_comprimento.getText().toString().length() == 0) {
-                Toast.makeText(getContext(), getString(R.string.erro_bielas), Toast.LENGTH_LONG).show();
+            if (campo_curso.getText().toString().length() == 0) {
+                Toast.makeText(getContext(), getString(R.string.erro_vira), Toast.LENGTH_LONG).show();
             } else {
+
+                if (campo_comprimento.getText().toString().length() == 0) {
+                    Toast.makeText(getContext(), getString(R.string.erro_bielas), Toast.LENGTH_LONG).show();
+                } else {
 
                 if (campo_diametro.getText().toString().length() == 0) {
                     Toast.makeText(getContext(), getString(R.string.erro_bielas), Toast.LENGTH_LONG).show();

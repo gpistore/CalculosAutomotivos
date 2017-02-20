@@ -32,6 +32,10 @@
             android:icon="@drawable/taxa"
             android:title="@string/taxa" />
         <item
+            android:id="@+id/torque"
+            android:icon="@drawable/car_speedometer"
+            android:title="@string/torque" />
+        <item
             android:id="@+id/configuracoes"
             android:icon="@drawable/config"
             android:title="@string/config" />

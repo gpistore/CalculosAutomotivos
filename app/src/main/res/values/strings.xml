@@ -8,6 +8,7 @@
     <string name="calculo_rl">R/L e Cilindrada</string>
     <string name="calculo_vmp">Velocidade Média do Pistão</string>
     <string name="bicos">Bicos Injetores</string>
+    <string name="torque">Torque x Potência</string>
     <string name="taxa">Taxa de Compressão</string>
     <string name="config">Configurações</string>
 
@@ -97,9 +98,10 @@
     <string name="diferenca">Diferença:</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="desenvolvido_por">Desenvolvido Por: Gustavo Pistore</string>
     <string name="compartilhar">Compartilhar</string>
+
 
 
 </resources>

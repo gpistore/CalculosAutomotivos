@@ -85,4 +85,8 @@
     <string name="diam_original">Original Diameter:</string>
     <string name="diam_alterado">New Diameter:</string>
     <string name="diferenca">Difference</string>
+    <string name="compartilhar">Share</string>
+    <string name="config">Settings</string>
+    <string name="desenvolvido_por">Developed by: Gustavo Pistore</string>
+    <string name="torque">Power vs Torque</string>
 </resources>

@@ -91,7 +91,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, cambio).commit();
             toolbar.setTitle(R.string.calculo_cambio);
             prop.mostra();
-
         }else if (id == R.id.taxa) {
                 TaxaFragment taxa = new TaxaFragment();
                 getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, taxa).commit();
@@ -102,7 +101,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, config).commit();
             toolbar.setTitle(R.string.config);
             prop.mostra();
+        }else if (id == R.id.torque) {
+            TorqueFragment torque = new TorqueFragment();
+            getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, torque).commit();
+            toolbar.setTitle(R.string.torque);
+            prop.mostra();
         }
+
 
         ImageView mainimg = (ImageView) findViewById(R.id.mainimg);
         mainimg.setOnClickListener(new View.OnClickListener() {
