@@ -9,8 +9,10 @@
     <string name="calculo_vmp">Velocidade Média do Pistão</string>
     <string name="bicos">Bicos Injetores</string>
     <string name="torque">Torque x Potência</string>
+    <string name="torquexpot">Torque => Potência</string>
+    <string name="potxtorque">Potência => Torque</string>
     <string name="taxa">Taxa de Compressão</string>
-    <string name="config">Configurações</string>
+    <string name="config">Sobre</string>
 
     <!--Campos-->
     <string name="Curso_vira">Curso do Virabrequim(mm): </string>
@@ -99,9 +101,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-    <string name="desenvolvido_por">Desenvolvido Por: Gustavo Pistore</string>
+    <string name="desenvolvido_por">Desenvolvido Por: GPistore Apps</string>
     <string name="compartilhar">Compartilhar</string>
-
+    <string name="campo_torque" translatable="false">Torque (kgfm):</string>
 
 
 </resources>

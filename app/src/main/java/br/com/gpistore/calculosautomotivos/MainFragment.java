@@ -31,6 +31,8 @@ public class MainFragment extends Fragment {
         ImageView imgrodas = (ImageView) view.findViewById(R.id.imgrodas);
         ImageView imgbicos = (ImageView) view.findViewById(R.id.imgbicos);
         ImageView imgtaxa = (ImageView) view.findViewById(R.id.imgtaxa);
+        ImageView imgtorque = (ImageView) view.findViewById(R.id.imgtorque);
+        ImageView imgsobre = (ImageView) view.findViewById(R.id.imgsobre);
 
         imgrl.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -80,6 +82,24 @@ public class MainFragment extends Fragment {
                 getFragmentManager().beginTransaction().replace(R.id.mainframe, Taxa).commit();
                 navigationView.setCheckedItem(R.id.taxa);
                 toolbar.setTitle(R.string.taxa);
+            }
+        });
+
+        imgtorque.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                TorqueFragment Torque = new TorqueFragment();
+                getFragmentManager().beginTransaction().replace(R.id.mainframe, Torque).commit();
+                navigationView.setCheckedItem(R.id.torque);
+                toolbar.setTitle(R.string.torque);
+            }
+        });
+
+        imgsobre.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                ConfigFragment Config= new ConfigFragment();
+                getFragmentManager().beginTransaction().replace(R.id.mainframe, Config).commit();
+                navigationView.setCheckedItem(R.id.configuracoes);
+                toolbar.setTitle(R.string.config);
             }
         });
 
