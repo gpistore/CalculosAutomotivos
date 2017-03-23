@@ -104,6 +104,11 @@
     <string name="desenvolvido_por">Desenvolvido Por: GPistore Apps</string>
     <string name="compartilhar">Compartilhar</string>
     <string name="campo_torque" translatable="false">Torque (kgfm):</string>
+    <string name="classifique" >Avalie o App!</string>
+    <string name="texto_classifique">Agora que você conhece o aplicativo, avalie-o na Play Store</string>
+    <string name="btnpos" >Avaliar</string>
+    <string name="btnneu">Mais tarde</string>
+    <string name="btnneg">Não mostrar novamente</string>
 
 
 </resources>

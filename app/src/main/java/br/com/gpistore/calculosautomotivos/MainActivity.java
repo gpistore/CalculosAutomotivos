@@ -1,5 +1,11 @@
 package br.com.gpistore.calculosautomotivos;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -11,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -27,7 +34,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
          prop = new Propaganda(this);
-        MainFragment Main = new MainFragment();
+        final SharedPreferences prefs = getSharedPreferences("pref_calculadoraautomotiva", Context.MODE_PRIVATE);
+            final int nracessos = prefs.getInt("qtdacessos",0);
+        if (nracessos >=0) {
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putInt("qtdacessos", nracessos + 1);
+            editor.apply();
+        }
+
+        final MainFragment Main = new MainFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Main).commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -35,6 +50,41 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
+
+
+        if(nracessos > 3){
+            AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+            alertDialog.setTitle(getString(R.string.classifique));
+            alertDialog.setMessage(getString(R.string.texto_classifique));
+            alertDialog.setPositiveButton(getString(R.string.btnpos), new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse("market://details?id=br.com.gpistore.calculosautomotivos"));
+                    startActivity(intent);
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putInt("qtdacessos", -1);
+                    editor.apply();
+                }
+            });
+            alertDialog.setNegativeButton(getString(R.string.btnneg), new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putInt("qtdacessos", -1);
+                    editor.apply();
+                }
+            });
+            alertDialog.setNeutralButton(getString(R.string.btnneu), new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putInt("qtdacessos", 0);
+                    editor.apply();
+                }
+            });
+
+            alertDialog.setIcon(R.mipmap.ic_launcher);
+            alertDialog.create();
+            alertDialog.show();
+        }
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);

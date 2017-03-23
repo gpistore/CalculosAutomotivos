@@ -91,4 +91,9 @@
     <string name="torque">Power vs Torque</string>
     <string name="potxtorque">Power => Torque</string>
     <string name="torquexpot">Torque => Power</string>
+    <string name="btnpos">Rate</string>
+    <string name="btnneu">Later</string>
+    <string name="btnneg">Don´t Show again</string>
+    <string name="classifique">Rate this app!</string>
+    <string name="texto_classifique">Please rate this app on Play Store</string>
 </resources>

@@ -48,30 +48,30 @@ public class TaxaFragment extends Fragment implements View.OnTouchListener {
         SpinerPistaoAdapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_dropdown_item, arrayTipoPistao);
         tipopistao.setAdapter(SpinerPistaoAdapter);
 
-        tipopistao.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if(i == 0){
-                    linha_vlpistao.setVisibility(View.GONE);
-                    fgdomo = false;
-                    fgcava = false;
-                }else{
-                    linha_vlpistao.setVisibility(View.VISIBLE);
-                    if(i == 1){
-                        lblvolumepistao.setText(getString(R.string.volume_cava));
+            tipopistao.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    if(i == 0){
+                        linha_vlpistao.setVisibility(View.GONE);
                         fgdomo = false;
-                        fgcava = true;
-                    }else{
-                        lblvolumepistao.setText(getString(R.string.volume_domo));
-                        fgdomo = true;
                         fgcava = false;
+                    }else{
+                        linha_vlpistao.setVisibility(View.VISIBLE);
+                        if(i == 1){
+                            lblvolumepistao.setText(getString(R.string.volume_cava));
+                            fgdomo = false;
+                            fgcava = true;
+                        }else{
+                            lblvolumepistao.setText(getString(R.string.volume_domo));
+                            fgdomo = true;
+                            fgcava = false;
+                        }
                     }
                 }
-            }
 
-            public void onNothingSelected(AdapterView<?> adapterView) {
-                return;
-            }
-        });
+                public void onNothingSelected(AdapterView<?> adapterView) {
+                    return;
+                }
+            });
 
         btncalcular.setOnClickListener(new View.OnClickListener() {
            @Override

@@ -1,6 +1,7 @@
 package br.com.gpistore.calculosautomotivos;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,7 +14,7 @@ import android.widget.Button;
 public class ConfigFragment extends Fragment implements View.OnTouchListener {
 
     View view;
-    Button btncompartilhar;
+    Button btncompartilhar,btnavaliar;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_config, container, false);
         btncompartilhar = (Button) view.findViewById(R.id.btncompartilhar);
@@ -26,6 +27,17 @@ public class ConfigFragment extends Fragment implements View.OnTouchListener {
              shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Compartilhar");
              shareIntent.putExtra(Intent.EXTRA_TEXT, "Conheça o aplicativo Calculadora automotiva.\n https://play.google.com/store/apps/details?id=br.com.gpistore.calculosautomotivos");
              startActivity(shareIntent);
+            }
+        });
+
+        btnavaliar = (Button) view.findViewById(R.id.btnavaliar);
+
+        btnavaliar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("market://details?id=br.com.gpistore.calculosautomotivos"));
+                startActivity(intent);
             }
         });
 

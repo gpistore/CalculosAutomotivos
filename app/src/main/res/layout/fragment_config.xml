@@ -52,6 +52,15 @@
             android:paddingLeft="100dp"
             android:drawablePadding="-60dp"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_grade_white_24dp"
+            android:id="@+id/btnavaliar"
+            android:text="@string/classifique"
+            android:paddingLeft="100dp"
+            android:drawablePadding="-60dp"/>
+
     </LinearLayout>
 
 </FrameLayout>
