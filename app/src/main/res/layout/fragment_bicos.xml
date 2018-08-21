@@ -2,144 +2,148 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.gpistore.calculosautomotivos.BicosFragment">
+    tools:context="br.com.gpistore.calculosautomotivos.fragments.BicosFragment">
 
-    <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/mainlayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/mainlayout">
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spntipocalcbico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
-                android:text="@string/potencia"
+                android:id="@+id/lblpotencia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView21"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="@string/bicos_potencia" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
                 android:id="@+id/txtpotencia"
-                android:layout_weight="1" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
-                android:text="@string/injetores"
+                android:id="@+id/textView32"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView32"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="@string/injetores" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
                 android:id="@+id/txtnrinjetores"
-                android:layout_weight="1" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
-                android:text="@string/combustivel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/textView33"
-                android:layout_weight="1" />
-
-            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/combustivel" />
+
+            <Spinner
                 android:id="@+id/spinnercomb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
-                android:text="@string/tipo_motor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/textView34"
-                android:layout_weight="1" />
-
-            <Spinner
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tipo_motor" />
+
+            <Spinner
                 android:id="@+id/spinnertipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
-                android:text="@string/capacidade"
+                android:id="@+id/textView35"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView35"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="@string/capacidade" />
 
             <Spinner
+                android:id="@+id/spinnercapacidade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/spinnercapacidade"
                 android:layout_weight="1" />
 
         </LinearLayout>
 
         <Button
-            android:text="@string/botao_calcular"
+            android:id="@+id/btncalcular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btncalcular" />
+            android:text="@string/botao_calcular" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="40dp" />
 
         <TextView
+            android:id="@+id/txtvalorlbhr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtvalorlbhr"
-            android:textAppearance="@android:style/TextAppearance.Large"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Large" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="20dp" />
 
         <TextView
+            android:id="@+id/txtvalorccmin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtvalorccmin"
-            android:textAppearance="@android:style/TextAppearance.Large"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Large" />
 
     </LinearLayout>
 </FrameLayout>

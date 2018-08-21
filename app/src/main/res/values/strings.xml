@@ -3,31 +3,90 @@
     <string name="app_name">Calculadora Automotiva</string>
     <string name="navigation_drawer_open">Abrir Aba de Navegação</string>
     <string name="navigation_drawer_close">Fechar Aba de Navegação</string>
-    <string name="calculo_cambio">Cálculo Câmbio</string>
-    <string name="tamanho_rodas">Tamanho Rodas</string>
-    <string name="calculo_rl">R/L e Cilindrada</string>
-    <string name="calculo_vmp">Velocidade Média do Pistão</string>
-    <string name="bicos">Bicos Injetores</string>
-    <string name="torque">Torque x Potência</string>
-    <string name="torquexpot">Torque => Potência</string>
-    <string name="potxtorque">Potência => Torque</string>
-    <string name="taxa">Taxa de Compressão</string>
-    <string name="config">Sobre</string>
+    <!--/Títulos-->
+
+    <!--Opções Menu-->
+    <string name="opt_cambio">Cálculo Câmbio</string>
+    <string name="opt_rodas">Tamanho Rodas</string>
+    <string name="opt_rl">R/L e Cilindrada</string>
+    <string name="opt_vmp">Velocidade Média do Pistão</string>
+    <string name="opt_bicos">Bicos Injetores</string>
+    <string name="opt_torque">Torque x Potência</string>
+    <string name="opt_taxa">Taxa de Compressão</string>
+    <string name="opt_config">Sobre</string>
+    <!--/Opções Menu-->
+
+    <!--RL-->
+    <string name="rl_curso">Curso do Virabrequim(mm) </string>
+    <string name="rl_comp">Comprimento das Bielas(mm) </string>
+    <string name="rl_diam">Diâmetro(mm) </string>
+    <string name="rl_cil">Nº de Cilindros </string>
+    <string name="rl_rl">R/L </string>
+    <string name="rl_cilindrada">Cilindrada </string>
+    <!--/RL-->
+
+    <!--VMP-->
+    <string name="vmp_curso">Curso do Pistão(mm) </string>
+    <string name="vmp_rotacao">Rotação Máxima(rpm) </string>
+    <string name="vmp_vmp">VMP </string>
+    <!--\VMP-->
+
+    <!--Roda-->
+    <string name="roda_original">Roda Original</string>
+    <string name="roda_alterada">Roda Alterada</string>
+    <string name="roda_largura">Largura </string>
+    <string name="roda_altura">Altura </string>
+    <string name="roda_aro">Aro</string>
+    <string name="roda_diamori">Diâmetro Original</string>
+    <string name="roda_diamalt">Diâmetro Alterado</string>
+    <string name="roda_diferenca">Diferença</string>
+    <!--\Roda-->
+
+    <!--Bicos-->
+    <string name="bicos_calculo_tipo">Tipo de Cálculo</string>
+    <string name="bicos_combustivel">Combustível</string>
+    <string name="bicos_capacidade">Capacidade</string>
+    <string name="bicos_tipo_motor">Tipo de Cálculo</string>
+    <string name="bicos_uso">Tipo de Cálculo</string>
+
+
+    <string name="bicos_potencia">Potência(cv)</string>
+    <string name="bicos_nrinjetores">Número de Injetores</string>
+
+    <!--\Bicos-->
+
+    <!-- Config -->
+    <string name="desenvolvido_por">Desenvolvido Por</string>
+    <string name="compartilhar">Compartilhe</string>
+    <string name="classifique">Classifique</string>
+
+    <!-- /Config -->
+
+
+    <!-- Common -->
+    <string name="botao_calcular">Calcular</string>
+    <string name="obrigatorio">Campo Obrigatório!</string>
+
+    <!-- /Common -->
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!--Campos-->
     <string name="Curso_vira">Curso do Virabrequim(mm): </string>
     <string name="Comprimento_bielas">Comprimento das Bielas(mm): </string>
     <string name="Diametro">Diâmetro(mm): </string>
     <string name="num_cil">Nº de Cilindros: </string>
-    <string name="RL">R/L: </string>
-    <string name="cilindrada">Cilindrada: </string>
-    <string name="Curso_pistao">Curso do Pistão(mm): </string>
-    <string name="rotacao_max">Rotação Máxima(rpm): </string>
-    <string name="VMP">VMP: </string>
-    <string name="roda1">Roda Original</string>
-    <string name="medida">Medida: </string>
-    <string name="roda2">Roda Alterada</string>
-    <string name="Rodas">Rodas</string>
+
     <string name="Rel_Cambio">Relação de Câmbio</string>
     <string name="primeira">1ª: </string>
     <string name="segunda">2ª: </string>
@@ -37,22 +96,20 @@
     <string name="sexta">6ª: </string>
     <string name="Diferencial">Diferencial: </string>
     <string name="rotacao_maxima">Rotação Máxima(rpm): </string>
-    <string name="potencia">Potência(cv):</string>
+
     <string name="injetores">Número de Injetores: </string>
     <string name="tipo_motor">Tipo de Motor: </string>
     <string name="combustivel">Combustível: </string>
     <string name="capacidade">Capacidade Utilizada: </string>
     <string name="ccmin">CC/Min: </string>
     <string name="lbhr">Lb/Hr: </string>
+    <string name="bico">bico (lb/hr): </string>
     <string name="volume_domo">Volume do domo</string>
     <string name="volume_cava">Volume das cavas</string>
-    <string name="comb1">Álcool</string>
-    <string name="comb2">Gasolina</string>
-    <string name="comb3">Metanol</string>
-    <string name="tipo1">Aspirado</string>
-    <string name="tipo2">Turbo</string>
+
     <!--Avisos-->
-    <string name="erro_vira">Preencha o Curso do Virabrequim!</string>
+    <string name="torquexpot">Torque => Potência</string>
+    <string name="potxtorque">Potência => Torque</string>
     <string name="erro_diam">Preencha o Diâmetro do Pistão!</string>
     <string name="erro_bielas">Preencha o Comprimento das Bielas!</string>
     <string name="erro_cilindros">Preencha a Quantidade de Cilindros!</string>
@@ -77,7 +134,7 @@
     <string name="erro_potencia">Preencha o Campo Potência!</string>
     <string name="erro_injetores">Preencha o Campo Número de Injetores!</string>
     <!--Botões-->
-    <string name="botao_calcular">Calcular</string>
+
     <!--Textos-->
     <string name="resultado_velocidade">Velocidade Máxima</string>
     <string name="texto_inicial">Escolha o Cálculo que deseja</string>
@@ -90,6 +147,9 @@
     <string name="plano">Plano</string>
     <string name="domo">Com domo</string>
 
+    <string name="calctam">Calcular Bico</string>
+    <string name="calcpot">Calcular Potência</string>
+
     <string name="erro_volume_camara">Preencha o Campo Volume da câmara!</string>
     <string name="erro_espessura_junta">Preencha o Campo Espessura da Junta!</string>
     <string name="erro_volume_domo">Preencha o Campo Volume do Domo!</string>
@@ -99,16 +159,23 @@
     <string name="diam_alterado">Diâmetro Alterado: </string>
     <string name="diferenca">Diferença:</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-    <string name="desenvolvido_por">Desenvolvido Por: GPistore Apps</string>
-    <string name="compartilhar">Compartilhar</string>
+
+
     <string name="campo_torque" translatable="false">Torque (kgfm):</string>
-    <string name="classifique" >Avalie o App!</string>
+
     <string name="texto_classifique">Agora que você conhece o aplicativo, avalie-o na Play Store</string>
     <string name="btnpos" >Avaliar</string>
     <string name="btnneu">Mais tarde</string>
     <string name="btnneg">Não mostrar novamente</string>
 
+
+    <!--remover depois -->
+    <string name="roda1">--</string>
+    <string name="medida">--</string>
+    <string name="Rodas">--</string>
+    <string name="roda2">--</string>
+    <string name="rotacao_max">--</string>
+
+    <!--/remover depois -->
 
 </resources>

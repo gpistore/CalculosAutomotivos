@@ -1,4 +1,4 @@
-package br.com.gpistore.calculosautomotivos;
+package br.com.gpistore.calculosautomotivos.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+
+import br.com.gpistore.calculosautomotivos.R;
 
 
 public class CambioFragment extends Fragment implements View.OnTouchListener {

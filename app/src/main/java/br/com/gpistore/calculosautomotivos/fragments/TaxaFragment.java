@@ -1,5 +1,5 @@
 
-package br.com.gpistore.calculosautomotivos;
+package br.com.gpistore.calculosautomotivos.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,6 +19,8 @@ import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+
+import br.com.gpistore.calculosautomotivos.R;
 
 
 public class TaxaFragment extends Fragment implements View.OnTouchListener {
@@ -96,7 +98,6 @@ public class TaxaFragment extends Fragment implements View.OnTouchListener {
         campo_valor_taxa = (TextView) view.findViewById(R.id.txtvalortaxa);
 
         if (campo_curso.getText().toString().length() == 0) {
-            Toast.makeText(getContext(), getString(R.string.erro_vira), Toast.LENGTH_LONG).show();
         } else {
             if (campo_diam.getText().toString().length() == 0) {
                 Toast.makeText(getContext(), getString(R.string.erro_diam), Toast.LENGTH_LONG).show();
@@ -130,8 +131,9 @@ public class TaxaFragment extends Fragment implements View.OnTouchListener {
                             }
                             volumecamara += volumejunta + volumepistao;
                             double taxa = (cilindrada + volumecamara)/volumecamara;
-
-                            campo_valor_taxa.setText(getString(R.string.taxa)+": "+mascara_taxa.format(taxa)+":1");
+                            //!!corrigir escrito taxa!!!
+                            //campo_valor_taxa.setText(getString(R.string.taxa)+": "+mascara_taxa.format(taxa)+":1");
+                            campo_valor_taxa.setText("taxa: "+mascara_taxa.format(taxa)+":1");
                         }
                     }
                 }

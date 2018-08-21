@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.com.gpistore.calculosautomotivos.TorqueFragment">
+    tools:context="br.com.gpistore.calculosautomotivos.fragments.TorqueFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="@string/potencia"
+                android:text="@string/bicos_potencia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/lblpotencia"

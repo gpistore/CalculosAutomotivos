@@ -1,24 +1,20 @@
-package br.com.gpistore.calculosautomotivos;
+package common;
 
 import android.app.Activity;
-
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 
-/**
- * Created by Gustavo Pistore on 06/02/2017.
- */
 
 public class Propaganda {
 
-    InterstitialAd mInterstitialAd;
-    boolean click;
+    private InterstitialAd mInterstitialAd;
+    private boolean click = true;
+
     public Propaganda(Activity activity){
         mInterstitialAd = new InterstitialAd(activity);
         mInterstitialAd.setAdUnitId("ca-app-pub-2664724094770763/3644317232");
         requestNewInterstitial();
-        click = true;
         mInterstitialAd.setAdListener(new AdListener() {
             //@Override
             public void onAdClosed() {
@@ -36,7 +32,7 @@ public class Propaganda {
     }
 
     public void mostra(){
-        if (mInterstitialAd.isLoaded() && click == true ) {
+        if (mInterstitialAd.isLoaded() && click) {
             mInterstitialAd.show();
             click = false;
         }else{

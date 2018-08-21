@@ -96,4 +96,7 @@
     <string name="btnneg">Don´t Show again</string>
     <string name="classifique">Rate this app!</string>
     <string name="texto_classifique">Please rate this app on Play Store</string>
+    <string name="calcpot">Calculate Power</string>
+    <string name="calctam">Calculate Injector</string>
+    <string name="bico">Injector (lb/hr):</string>
 </resources>

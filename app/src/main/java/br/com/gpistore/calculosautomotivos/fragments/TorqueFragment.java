@@ -1,4 +1,4 @@
-package br.com.gpistore.calculosautomotivos;
+package br.com.gpistore.calculosautomotivos.fragments;
 
         import android.os.Bundle;
         import android.support.v4.app.Fragment;
@@ -17,6 +17,8 @@ package br.com.gpistore.calculosautomotivos;
 
         import java.text.DecimalFormat;
         import java.text.NumberFormat;
+
+        import br.com.gpistore.calculosautomotivos.R;
 
         import static br.com.gpistore.calculosautomotivos.R.id.linha_vlpistao;
 
@@ -50,7 +52,7 @@ public class TorqueFragment extends Fragment implements View.OnTouchListener {
         tipocalculo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) {
-                    lbl_potencia.setText(getString(R.string.potencia));
+                    lbl_potencia.setText(getString(R.string.bicos_potencia));
                     fgtorque = false;
                     fgpot = true;
                     campo_potencia.setText("");
@@ -105,7 +107,7 @@ public class TorqueFragment extends Fragment implements View.OnTouchListener {
                 if (fgtorque){
                     potencia = potencia*9.80665;
                     result = ((potencia * PI2 * rotacao)/60000)*1.3596216;
-                    campo_resultado.setText(getString(R.string.potencia)+mascara_result.format(result));
+                    campo_resultado.setText(getString(R.string.bicos_potencia)+mascara_result.format(result));
                 }else{
                     potencia = potencia*0.7354988;
                     result = (potencia * 60000)/(PI2 * rotacao)*0.101972;

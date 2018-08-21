@@ -10,35 +10,35 @@
         <item
             android:id="@+id/rl"
             android:icon="@drawable/bicycle_sprockets"
-            android:title="@string/calculo_rl" />
+            android:title="@string/opt_rl" />
         <item
             android:id="@+id/vmp"
             android:icon="@drawable/pistons_cross"
-            android:title="@string/calculo_vmp" />
+            android:title="@string/opt_vmp" />
         <item
             android:id="@+id/bicos"
             android:icon="@drawable/bico"
-            android:title="@string/bicos" />
+            android:title="@string/opt_bicos" />
         <item
             android:id="@+id/cambio"
             android:icon="@drawable/driving_gear_controls"
-            android:title="@string/calculo_cambio" />
+            android:title="@string/opt_cambio" />
         <item
             android:id="@+id/rodas"
             android:icon="@drawable/cart_wheel"
-            android:title="@string/tamanho_rodas" />
+            android:title="@string/opt_rodas" />
         <item
             android:id="@+id/taxa"
             android:icon="@drawable/taxa"
-            android:title="@string/taxa" />
+            android:title="@string/opt_taxa" />
         <item
             android:id="@+id/torque"
             android:icon="@drawable/car_speedometer"
-            android:title="@string/torque" />
+            android:title="@string/opt_torque" />
         <item
             android:id="@+id/configuracoes"
             android:icon="@drawable/config"
-            android:title="@string/config" />
+            android:title="@string/opt_config" />
 
 
     </group>
