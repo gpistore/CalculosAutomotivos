@@ -57,11 +57,11 @@
 
     <!-- Config -->
     <string name="desenvolvido_por">Desenvolvido Por</string>
+    <string name="gpistoreapps">GPistore Apps</string>
     <string name="compartilhar">Compartilhe</string>
     <string name="classifique">Classifique</string>
 
     <!-- /Config -->
-
 
     <!-- Common -->
     <string name="botao_calcular">Calcular</string>

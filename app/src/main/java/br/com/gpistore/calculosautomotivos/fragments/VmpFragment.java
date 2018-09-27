@@ -8,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
@@ -23,6 +23,7 @@ public class VmpFragment extends Fragment implements View.OnTouchListener {
         View view;
         TextInputLayout campo_curso, campo_rotacao;
         TextView lbl_vmp;
+        LinearLayout layout_result;
         Button btncalcular;
         NumberFormat mascara_vmp;
         ArrayList<TextInputLayout> ListaCampos;
@@ -45,6 +46,7 @@ public class VmpFragment extends Fragment implements View.OnTouchListener {
         campo_curso =   (TextInputLayout)  view.findViewById(R.id.vmp_txtcurso);
         campo_rotacao = (TextInputLayout)  view.findViewById(R.id.vmp_txtrotacao);
         lbl_vmp =       (TextView)  view.findViewById(R.id.vmp_lblvmp);
+        layout_result =     (LinearLayout)      view.findViewById(R.id.layout_result);
         mascara_vmp = new DecimalFormat("#.##");
         ListaCampos = new ArrayList<TextInputLayout>();
         ListaCampos.add(campo_curso);
@@ -69,6 +71,7 @@ public class VmpFragment extends Fragment implements View.OnTouchListener {
             //CALCULO DO VMP
             double vmp = (curso * rotacao) / 30000;
             lbl_vmp.setText(getString(R.string.vmp_vmp)+" "+mascara_vmp.format(vmp) + " m/s");
+            layout_result.setVisibility(View.VISIBLE);
         }
     }
 

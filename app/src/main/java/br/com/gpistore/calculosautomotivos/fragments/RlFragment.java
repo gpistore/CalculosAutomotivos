@@ -1,5 +1,6 @@
 package br.com.gpistore.calculosautomotivos.fragments;
 
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -20,6 +22,7 @@ public class RlFragment extends Fragment implements View.OnTouchListener {
     View view;
     TextInputLayout campo_cilindros, campo_diametro, campo_comprimento, campo_curso;
     TextView lbl_cilindrada, lbl_rl;
+    LinearLayout layout_result;
     Button btncalcular;
     NumberFormat mascara_cil,mascara_rl;
     ArrayList<TextInputLayout> ListaCampos;
@@ -56,6 +59,7 @@ public class RlFragment extends Fragment implements View.OnTouchListener {
         campo_curso =       (TextInputLayout)   view.findViewById(R.id.rl_txtvirabrequim);
         lbl_cilindrada =    (TextView)          view.findViewById(R.id.rl_lblcilindrada);
         lbl_rl =            (TextView)          view.findViewById(R.id.rl_lblrl);
+        layout_result =     (LinearLayout)      view.findViewById(R.id.layout_result);
 
         ListaCampos = new ArrayList<TextInputLayout>();
         ListaCampos.add(campo_cilindros);
@@ -71,11 +75,13 @@ public class RlFragment extends Fragment implements View.OnTouchListener {
 
         if (!utils.validar(ListaCampos,getActivity())) {
             //Valores
+
             double cilindros = Double.valueOf(campo_cilindros.getEditText().getText().toString());
             double comp = Double.valueOf((campo_comprimento.getEditText().getText().toString()));
             double diam = Double.valueOf(campo_diametro.getEditText().getText().toString());
             double curso = Double.valueOf((campo_curso.getEditText().getText().toString()));
             double PI = 3.14159265359;
+            layout_result.setVisibility(View.VISIBLE);
             //CALCULO DO RL
             double RL = (curso / 2) / comp;
             lbl_rl.setText(getString(R.string.rl_rl) + " " + mascara_rl.format(RL));

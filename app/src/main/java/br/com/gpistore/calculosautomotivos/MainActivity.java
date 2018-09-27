@@ -22,7 +22,7 @@ import common.Avaliacao;
 import common.Propaganda;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-        Toolbar toolbar;
+    Toolbar toolbar;
     private Propaganda ads;
     NavigationView navigationView;
     Avaliacao avaliacao;

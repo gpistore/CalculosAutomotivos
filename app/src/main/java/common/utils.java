@@ -24,7 +24,7 @@ public class utils {
         for( TextInputLayout campo : campos ) {
             if (campo.getEditText().getText().toString().length() == 0) {
             campo.setError(c.getString(R.string.obrigatorio));
-                retorno = true;
+            retorno = true;
             }else{
                 campo.setError(null);
                 campo.setErrorEnabled(false);
