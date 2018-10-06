@@ -26,7 +26,7 @@ public class CambioFragment extends Fragment implements View.OnTouchListener {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_cambio, container, false);
-
+        this.getActivity().setTitle(R.string.opt_cambio);
         btncalcular = (Button) view.findViewById(R.id.btncalcular);
 
         campo_largura = (EditText)    view.findViewById(R.id.txtnmlargura);

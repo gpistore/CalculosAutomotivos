@@ -36,6 +36,7 @@ public class TorqueFragment extends Fragment implements View.OnTouchListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        this.getActivity().setTitle(R.string.opt_torque);
         view = inflater.inflate(R.layout.fragment_torque, container, false);
 
 

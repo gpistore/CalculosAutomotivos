@@ -29,6 +29,7 @@ public class RlFragment extends Fragment implements View.OnTouchListener {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_rl, container, false);
+        this.getActivity().setTitle(R.string.opt_rl);
         setup();
         setupActions();
         view.findViewById(R.id.mainlayout).setOnTouchListener(this);

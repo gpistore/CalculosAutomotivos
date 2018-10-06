@@ -19,6 +19,7 @@ public class ConfigFragment extends Fragment implements View.OnTouchListener {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_config, container, false);
+        this.getActivity().setTitle(R.string.opt_config);
         setup();
         setupAction();
         view.findViewById(R.id.mainlayout).setOnTouchListener(this);

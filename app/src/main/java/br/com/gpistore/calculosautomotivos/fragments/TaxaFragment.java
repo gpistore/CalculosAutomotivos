@@ -36,6 +36,7 @@ public class TaxaFragment extends Fragment implements View.OnTouchListener {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_taxa, container, false);
+        this.getActivity().setTitle(R.string.opt_taxa);
         lblvolumepistao = (TextView) view.findViewById(R.id.lblvolumepistao);
         linha_vlpistao = (LinearLayout) view.findViewById(R.id.linha_vlpistao);
         btncalcular = (Button) view.findViewById(R.id.btncalcular);

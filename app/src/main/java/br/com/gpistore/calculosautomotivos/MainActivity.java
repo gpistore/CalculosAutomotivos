@@ -2,6 +2,8 @@ package br.com.gpistore.calculosautomotivos;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -69,58 +71,70 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+
         switch (id){
             case  (R.id.rl):
                 RlFragment RL = new RlFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, RL).commit();
-                toolbar.setTitle(R.string.opt_rl);
+                ft.replace(R.id.mainframe, RL);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 ads.mostra();
                 break;
             case (R.id.vmp):
                 VmpFragment Vmp = new VmpFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Vmp).commit();
-                toolbar.setTitle(R.string.opt_vmp);
+                ft.replace(R.id.mainframe, Vmp);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 ads.mostra();
                 break;
             case (R.id.rodas):
                 RodaFragment Roda = new RodaFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Roda).commit();
-                toolbar.setTitle(R.string.opt_rodas);
+                ft.replace(R.id.mainframe, Roda);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 ads.mostra();
                 break;
             case (R.id.bicos):
                 BicosFragment bicos = new BicosFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, bicos).commit();
-                toolbar.setTitle(R.string.opt_bicos);
+                ft.replace(R.id.mainframe, bicos);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 ads.mostra();
                 break;
             case (R.id.cambio):
                 CambioFragment cambio = new CambioFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, cambio).commit();
-                toolbar.setTitle(R.string.opt_cambio);
+                ft.replace(R.id.mainframe, cambio);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 ads.mostra();
                 break;
             case (R.id.taxa):
                 TaxaFragment taxa = new TaxaFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, taxa).commit();
-                toolbar.setTitle(R.string.opt_taxa);
+                ft.replace(R.id.mainframe, taxa);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 ads.mostra();
                 break;
             case (R.id.torque):
                 TorqueFragment torque = new TorqueFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, torque).commit();
-                toolbar.setTitle(R.string.opt_torque);
+                ft.replace(R.id.mainframe, torque);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 ads.mostra();
                 break;
             case (R.id.configuracoes):
                 ConfigFragment config = new ConfigFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, config).commit();
-                toolbar.setTitle(R.string.opt_config);
+                ft.replace(R.id.mainframe, config);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 break;
             default:
                 MainFragment Main = new MainFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.mainframe, Main).commit();
-                toolbar.setTitle(R.string.app_name);
+                ft.replace(R.id.mainframe, Main);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 navigationView.setCheckedItem(R.id.item_none);
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                 if (drawer != null) {

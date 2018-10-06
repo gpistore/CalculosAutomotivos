@@ -31,6 +31,7 @@ public class VmpFragment extends Fragment implements View.OnTouchListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_vmp, container, false);
+        this.getActivity().setTitle(R.string.opt_vmp);
         setup();
         setupActions();
         view.findViewById(R.id.mainlayout).setOnTouchListener(this);

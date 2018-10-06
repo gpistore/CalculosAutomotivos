@@ -46,10 +46,8 @@
     <string name="bicos_calculo_tipo">Tipo de Cálculo</string>
     <string name="bicos_combustivel">Combustível</string>
     <string name="bicos_capacidade">Capacidade</string>
-    <string name="bicos_tipo_motor">Tipo de Cálculo</string>
-    <string name="bicos_uso">Tipo de Cálculo</string>
-
-
+    <string name="bicos_tipo_motor">Tipo de Motor</string>
+    <string name="bicos_uso">Capacidade</string>
     <string name="bicos_potencia">Potência(cv)</string>
     <string name="bicos_nrinjetores">Número de Injetores</string>
 

@@ -4,6 +4,8 @@ package br.com.gpistore.calculosautomotivos;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +42,7 @@ public class MainFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_main, container, false);
         navigationView = ((MainActivity) getActivity()).navigationView;
         toolbar = ((MainActivity) getActivity()).toolbar;
+        this.getActivity().setTitle(R.string.app_name);
         setup();
         setupactions();
 
@@ -58,72 +61,99 @@ public class MainFragment extends Fragment {
     }
 
     private void setupactions(){
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+
         imgrl.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 RlFragment RL = new RlFragment();
-                getFragmentManager().beginTransaction().replace(R.id.mainframe, RL).commit();
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.mainframe, RL);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 navigationView.setCheckedItem(R.id.rl);
-                toolbar.setTitle(R.string.opt_rl);
             }
         });
         imgvmp.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 VmpFragment VMP = new VmpFragment();
-                getFragmentManager().beginTransaction().replace(R.id.mainframe, VMP).commit();
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.mainframe, VMP);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 navigationView.setCheckedItem(R.id.vmp);
-                toolbar.setTitle(R.string.opt_vmp);
             }
         });
         imgcambio.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 CambioFragment cambio = new CambioFragment();
-                getFragmentManager().beginTransaction().replace(R.id.mainframe, cambio).commit();
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.mainframe, cambio);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 navigationView.setCheckedItem(R.id.cambio);
-                toolbar.setTitle(R.string.opt_cambio);
             }
         });
         imgrodas.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 RodaFragment Roda = new RodaFragment();
-                getFragmentManager().beginTransaction().replace(R.id.mainframe, Roda).commit();
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.mainframe, Roda);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 navigationView.setCheckedItem(R.id.rodas);
-                toolbar.setTitle(R.string.opt_rodas);
             }
         });
 
         imgbicos.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 BicosFragment Bicos = new BicosFragment();
-                getFragmentManager().beginTransaction().replace(R.id.mainframe, Bicos).commit();
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.mainframe, Bicos);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 navigationView.setCheckedItem(R.id.bicos);
-                toolbar.setTitle(R.string.opt_bicos);
             }
         });
 
         imgtaxa.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 TaxaFragment Taxa = new TaxaFragment();
-                getFragmentManager().beginTransaction().replace(R.id.mainframe, Taxa).commit();
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.mainframe, Taxa);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 navigationView.setCheckedItem(R.id.taxa);
-                toolbar.setTitle(R.string.opt_taxa);
             }
         });
 
         imgtorque.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 TorqueFragment Torque = new TorqueFragment();
-                getFragmentManager().beginTransaction().replace(R.id.mainframe, Torque).commit();
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.mainframe, Torque);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 navigationView.setCheckedItem(R.id.torque);
-                toolbar.setTitle(R.string.opt_torque);
             }
         });
 
         imgsobre.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 ConfigFragment Config= new ConfigFragment();
-                getFragmentManager().beginTransaction().replace(R.id.mainframe, Config).commit();
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.mainframe, Config);
+                ft.addToBackStack("pilha");
+                ft.commit();
                 navigationView.setCheckedItem(R.id.configuracoes);
-                toolbar.setTitle(R.string.opt_config);
             }
         });
     }
