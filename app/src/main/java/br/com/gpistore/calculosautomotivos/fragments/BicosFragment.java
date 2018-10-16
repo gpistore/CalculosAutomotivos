@@ -77,7 +77,7 @@ public class BicosFragment extends Fragment implements View.OnTouchListener {
 //                    lblpotencia.setText(getString(R.string.potencia));
 //                }else{
 //                    tipocalc = 1;
-//                    lblpotencia.setText(getString(R.string.bico));
+//                    lblpotencia.setText(getString(R.string.img_bico));
 //                }
 //            }
 //            @Override

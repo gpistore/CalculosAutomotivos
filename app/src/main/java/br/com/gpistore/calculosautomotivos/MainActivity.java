@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import br.com.gpistore.calculosautomotivos.fragments.BicosFragment;
 import br.com.gpistore.calculosautomotivos.fragments.CambioFragment;
 import br.com.gpistore.calculosautomotivos.fragments.ConfigFragment;
+import br.com.gpistore.calculosautomotivos.fragments.MainFragment;
 import br.com.gpistore.calculosautomotivos.fragments.RlFragment;
 import br.com.gpistore.calculosautomotivos.fragments.RodaFragment;
 import br.com.gpistore.calculosautomotivos.fragments.TaxaFragment;
@@ -24,9 +25,9 @@ import common.Avaliacao;
 import common.Propaganda;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    Toolbar toolbar;
-    private Propaganda ads;
-    NavigationView navigationView;
+    public NavigationView navigationView;
+    public Toolbar toolbar;
+    public Propaganda ads;
     Avaliacao avaliacao;
 
     @Override

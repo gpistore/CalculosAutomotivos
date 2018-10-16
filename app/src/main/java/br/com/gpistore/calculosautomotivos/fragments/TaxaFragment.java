@@ -132,9 +132,9 @@ public class TaxaFragment extends Fragment implements View.OnTouchListener {
                             }
                             volumecamara += volumejunta + volumepistao;
                             double taxa = (cilindrada + volumecamara)/volumecamara;
-                            //!!corrigir escrito taxa!!!
-                            //campo_valor_taxa.setText(getString(R.string.taxa)+": "+mascara_taxa.format(taxa)+":1");
-                            campo_valor_taxa.setText("taxa: "+mascara_taxa.format(taxa)+":1");
+                            //!!corrigir escrito img_taxa!!!
+                            //campo_valor_taxa.setText(getString(R.string.img_taxa)+": "+mascara_taxa.format(img_taxa)+":1");
+                            campo_valor_taxa.setText("img_taxa: "+mascara_taxa.format(taxa)+":1");
                         }
                     }
                 }

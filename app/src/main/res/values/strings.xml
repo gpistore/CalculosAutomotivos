@@ -50,9 +50,14 @@
     <string name="bicos_uso">Capacidade</string>
     <string name="bicos_potencia">Potência(cv)</string>
     <string name="bicos_nrinjetores">Número de Injetores</string>
-
     <!--\Bicos-->
 
+    <!--img_taxa-->
+    <string name="taxa_diametro">Diametro</string>
+    <string name="taxa_curso_virabrequim">Curso do Virabrequim</string>
+
+
+    <!--/img_taxa-->
     <!-- Config -->
     <string name="desenvolvido_por">Desenvolvido Por</string>
     <string name="gpistoreapps">GPistore Apps</string>
@@ -70,20 +75,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
     <!--Campos-->
-    <string name="Curso_vira">Curso do Virabrequim(mm): </string>
-    <string name="Comprimento_bielas">Comprimento das Bielas(mm): </string>
-    <string name="Diametro">Diâmetro(mm): </string>
-    <string name="num_cil">Nº de Cilindros: </string>
 
     <string name="Rel_Cambio">Relação de Câmbio</string>
     <string name="primeira">1ª: </string>
@@ -105,7 +97,7 @@
     <string name="volume_domo">Volume do domo</string>
     <string name="volume_cava">Volume das cavas</string>
 
-    <!--Avisos-->
+
     <string name="torquexpot">Torque => Potência</string>
     <string name="potxtorque">Potência => Torque</string>
     <string name="erro_diam">Preencha o Diâmetro do Pistão!</string>
@@ -131,13 +123,13 @@
     <string name="erro_dif">Preencha o Campo Diferencial!</string>
     <string name="erro_potencia">Preencha o Campo Potência!</string>
     <string name="erro_injetores">Preencha o Campo Número de Injetores!</string>
-    <!--Botões-->
 
-    <!--Textos-->
+
+
     <string name="resultado_velocidade">Velocidade Máxima</string>
     <string name="texto_inicial">Escolha o Cálculo que deseja</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="tipo_pistao">Tipo de Pistão</string>
     <string name="volume_camara">Volume da câmara</string>
     <string name="espessura_junta">Espessura da junta(mm)</string>
@@ -167,13 +159,13 @@
     <string name="btnneg">Não mostrar novamente</string>
 
 
-    <!--remover depois -->
-    <string name="roda1">--</string>
-    <string name="medida">--</string>
-    <string name="Rodas">--</string>
-    <string name="roda2">--</string>
-    <string name="rotacao_max">--</string>
 
-    <!--/remover depois -->
+    <string name="roda1"></string>
+    <string name="medida"></string>
+    <string name="Rodas"></string>
+    <string name="roda2"></string>
+    <string name="rotacao_max"></string>
+
+
 
 </resources>

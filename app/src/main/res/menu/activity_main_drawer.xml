@@ -9,35 +9,35 @@
             android:visible="false"/>
         <item
             android:id="@+id/rl"
-            android:icon="@drawable/bicycle_sprockets"
+            android:icon="@drawable/img_bicycle_sprockets"
             android:title="@string/opt_rl" />
         <item
             android:id="@+id/vmp"
-            android:icon="@drawable/pistons_cross"
+            android:icon="@drawable/img_pistons_cross"
             android:title="@string/opt_vmp" />
         <item
             android:id="@+id/bicos"
-            android:icon="@drawable/bico"
+            android:icon="@drawable/img_bico"
             android:title="@string/opt_bicos" />
         <item
             android:id="@+id/cambio"
-            android:icon="@drawable/driving_gear_controls"
+            android:icon="@drawable/img_driving_gear_controls"
             android:title="@string/opt_cambio" />
         <item
             android:id="@+id/rodas"
-            android:icon="@drawable/cart_wheel"
+            android:icon="@drawable/img_cart_wheel"
             android:title="@string/opt_rodas" />
         <item
             android:id="@+id/taxa"
-            android:icon="@drawable/taxa"
+            android:icon="@drawable/img_taxa"
             android:title="@string/opt_taxa" />
         <item
             android:id="@+id/torque"
-            android:icon="@drawable/car_speedometer"
+            android:icon="@drawable/img_car_speedometer"
             android:title="@string/opt_torque" />
         <item
             android:id="@+id/configuracoes"
-            android:icon="@drawable/config"
+            android:icon="@drawable/img_config"
             android:title="@string/opt_config" />
 
 

@@ -18,7 +18,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="@string/Curso_vira"
+                android:text="@string/taxa_curso_virabrequim"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView36"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="@string/Diametro"
+                android:text="@string/taxa_diametro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView37"
@@ -141,7 +141,7 @@
             android:text="@string/botao_calcular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button"
+            android:background="@drawable/style_button"
             android:id="@+id/btncalcular" />
 
         <Space
