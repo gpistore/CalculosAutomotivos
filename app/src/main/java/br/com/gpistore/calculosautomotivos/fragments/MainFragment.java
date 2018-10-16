@@ -5,7 +5,6 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -20,8 +19,6 @@ import common.ItemDecoration;
 import common.Propaganda;
 import common.comp_main_list_adapter;
 import common.comp_main_list_item;
-
-import static android.widget.LinearLayout.VERTICAL;
 
 public class MainFragment extends Fragment {
     View view;
@@ -38,11 +35,12 @@ public class MainFragment extends Fragment {
 
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_main, container, false);
+        navigationView = ((MainActivity) getActivity()).navigationView;
         ads = ((MainActivity) getActivity()).ads;
         this.getActivity().setTitle(R.string.app_name);
         crialista();
         setup();
-        //setupactions();
+        setupactions();
 
         return view;
     }
@@ -58,13 +56,90 @@ public class MainFragment extends Fragment {
         lista.addItemDecoration(Decorador);
         lista.setAdapter(listaAdapter);
 
-
     }
 
-    private void setupactions(){
-        FragmentManager fm = getFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-
+    public void setupactions(){
+        ((comp_main_list_adapter) listaAdapter).setOnItemClickListener(new comp_main_list_adapter.ClickListener() {
+            @Override
+            public void onItemClick(int position, View v) {
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                switch(position){
+                    case 0: {
+                        BicosFragment Bicos = new BicosFragment();
+                        ft.replace(R.id.mainframe, Bicos);
+                        ft.addToBackStack("pilha");
+                        ads.mostra();
+                        navigationView.setCheckedItem(R.id.bicos);
+                        ft.commit();
+                        break;
+                    }
+                    case 1: {
+                        CambioFragment cambio = new CambioFragment();
+                        ft.replace(R.id.mainframe, cambio);
+                        ft.addToBackStack("pilha");
+                        ads.mostra();
+                        navigationView.setCheckedItem(R.id.cambio);
+                        ft.commit();
+                        break;
+                    }
+                    case 2: {
+                        RlFragment RL = new RlFragment();
+                        ft.replace(R.id.mainframe, RL);
+                        ft.addToBackStack("pilha");
+                        ads.mostra();
+                        navigationView.setCheckedItem(R.id.rl);
+                        ft.commit();
+                        break;
+                    }
+                    case 3: {
+                        RodaFragment Roda = new RodaFragment();
+                        ft.replace(R.id.mainframe, Roda);
+                        ft.addToBackStack("pilha");
+                        ads.mostra();
+                        navigationView.setCheckedItem(R.id.rodas);
+                        ft.commit();
+                        break;
+                    }
+                    case 4: {
+                        TaxaFragment Taxa = new TaxaFragment();
+                        ft.replace(R.id.mainframe, Taxa);
+                        ft.addToBackStack("pilha");
+                        ads.mostra();
+                        navigationView.setCheckedItem(R.id.taxa);
+                        ft.commit();
+                        break;
+                    }
+                    case 5: {
+                        TorqueFragment Torque = new TorqueFragment();
+                        ft.replace(R.id.mainframe, Torque);
+                        ft.addToBackStack("pilha");
+                        ads.mostra();
+                        navigationView.setCheckedItem(R.id.torque);
+                        ft.commit();
+                        break;
+                    }
+                    case 6: {
+                        VmpFragment VMP = new VmpFragment();
+                        ft.replace(R.id.mainframe, VMP);
+                        ft.addToBackStack("pilha");
+                        ads.mostra();
+                        navigationView.setCheckedItem(R.id.vmp);
+                        ft.commit();
+                        break;
+                    }
+                    case 7: {
+                        ConfigFragment Config= new ConfigFragment();
+                        ft.replace(R.id.mainframe, Config);
+                        ft.addToBackStack("pilha");
+                        ads.mostra();
+                        navigationView.setCheckedItem(R.id.configuracoes);
+                        ft.commit();
+                        break;
+                    }
+                }
+            }
+        });
     }
 
     private void crialista(){
