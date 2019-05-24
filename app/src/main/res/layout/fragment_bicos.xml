@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/Bico_layout_tipo"
+        android:id="@+id/Torque_layout_tipo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -18,24 +18,24 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/Bico_lbl_tipo"
-            style="@style/TextView.InputLabel"
+            android:id="@+id/torque_lbl_tipo"
+            style="@android:style/Widget.DeviceDefault.Light.TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/bicos_calculo_tipo" />
 
         <Spinner
-            android:id="@+id/bicos_spntipo"
+            android:id="@+id/torque_spntipo"
             style="@style/Widget.AppCompat.Spinner.Underlined"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
             android:spinnerMode="dialog"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Bico_lbl_tipo"
+            app:layout_constraintTop_toBottomOf="@+id/torque_lbl_tipo"
             tools:layout_constraintLeft_creator="1"
             tools:layout_constraintRight_creator="1" />
     </LinearLayout>
@@ -48,7 +48,7 @@
         android:layout_marginRight="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Bico_layout_tipo"
+        app:layout_constraintTop_toBottomOf="@+id/Torque_layout_tipo"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1">
 
@@ -91,7 +91,7 @@
 
         <TextView
             android:id="@+id/Bico_lbl_comb"
-            style="@style/TextView.InputLabel"
+            style="@android:style/Widget.DeviceDefault.Light.TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/bicos_combustivel" />
@@ -101,9 +101,9 @@
             style="@style/Widget.AppCompat.Spinner.Underlined"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
             android:spinnerMode="dialog"
             app:layout_constraintBottom_toTopOf="@+id/bicos_spnmotor"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -123,7 +123,7 @@
 
         <TextView
             android:id="@+id/Bico_lbl_motor"
-            style="@style/TextView.InputLabel"
+            style="@android:style/Widget.DeviceDefault.Light.TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/bicos_tipo_motor" />
@@ -133,9 +133,9 @@
             style="@style/Widget.AppCompat.Spinner.Underlined"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
             android:spinnerMode="dialog"
             app:layout_constraintBottom_toTopOf="@+id/bicos_spncapacidade"
             app:layout_constraintHorizontal_bias="0.0"
@@ -156,9 +156,10 @@
 
         <TextView
             android:id="@+id/bico_lbl_capacidade"
-            style="@style/TextView.InputLabel"
+            style="@android:style/Widget.DeviceDefault.Light.TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
             android:text="@string/bicos_capacidade" />
 
         <Spinner
@@ -166,9 +167,10 @@
             style="@style/Widget.AppCompat.Spinner.Underlined"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
             android:spinnerMode="dialog"
             app:layout_constraintBottom_toTopOf="@+id/btncalcular"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -190,15 +192,30 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1" />
 
-    <TextView
-        android:id="@+id/bicos_lblvalor"
+    <LinearLayout
+        android:id="@+id/layout_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/style_border"
+        android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btncalcular"
-        tools:text="Lb/hr cc/min potencia" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btncalcular">
+
+        <TextView
+            android:id="@+id/bicos_lblvalor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:textSize="24sp"
+            tools:text="Lb/hr cc/min potencia" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

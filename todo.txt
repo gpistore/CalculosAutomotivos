@@ -1,0 +1,5 @@
+Finalizar layouts atualizados
+Criaçao do novo modelo de spinner
+ajuste nos campos de resultado	
+Criação de flavours
+Revisão geral e organização de código

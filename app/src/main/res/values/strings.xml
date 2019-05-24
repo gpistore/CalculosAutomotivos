@@ -49,29 +49,48 @@
     <string name="bicos_tipo_motor">Tipo de Motor</string>
     <string name="bicos_uso">Capacidade</string>
     <string name="bicos_potencia">Potência(cv)</string>
-    <string name="bicos_nrinjetores">Número de Injetores</string>
+    <string name="bicos_nrinjetores">Número de Injetores </string>
+    <string name="bicos_vazao">Vazao(lb/hr)</string>
+    <string name="bicos_ccmin">CC/Min: </string>
+    <string name="bicos_lbhr">Lb/Hr: </string>
+    <string name="bicos_cv">cv</string>
     <!--\Bicos-->
 
-    <!--img_taxa-->
+    <!--taxa-->
     <string name="taxa_diametro">Diametro</string>
     <string name="taxa_curso_virabrequim">Curso do Virabrequim</string>
 
+    <!--taxa-->
 
-    <!--/img_taxa-->
+    <!--torque-->
+    <string name="torque_potencia">Potência (cv)</string>
+    <string name="torque_torque">Torque (Kgmf/m²)</string>
+    <string name="torque_rotacao">Rotação</string>
+    <string name="torque_tipo">Tipo de Cálculo</string>
+
+    <!--/torque-->
+
+    <!-- Câmbio -->
+
+    <!-- /Câmbio -->
+
     <!-- Config -->
-    <string name="desenvolvido_por">Desenvolvido Por</string>
     <string name="gpistoreapps">GPistore Apps</string>
-    <string name="compartilhar">Compartilhe</string>
-    <string name="classifique">Classifique</string>
+    <string name="config_compartilhar">Compartilhe</string>
+    <string name="config_classifique">Classifique</string>
+    <string name="config_versao">Versão 2.0</string>
 
     <!-- /Config -->
+
+    <!-- /Popup Classifique -->
+    <string name="classifique"> Classifique</string>
+    <!-- /Popup Classifique -->
 
     <!-- Common -->
     <string name="botao_calcular">Calcular</string>
     <string name="obrigatorio">Campo Obrigatório!</string>
 
     <!-- /Common -->
-
 
 
 
@@ -91,29 +110,13 @@
     <string name="tipo_motor">Tipo de Motor: </string>
     <string name="combustivel">Combustível: </string>
     <string name="capacidade">Capacidade Utilizada: </string>
-    <string name="ccmin">CC/Min: </string>
-    <string name="lbhr">Lb/Hr: </string>
-    <string name="bico">bico (lb/hr): </string>
+
     <string name="volume_domo">Volume do domo</string>
     <string name="volume_cava">Volume das cavas</string>
 
 
     <string name="torquexpot">Torque => Potência</string>
     <string name="potxtorque">Potência => Torque</string>
-    <string name="erro_diam">Preencha o Diâmetro do Pistão!</string>
-    <string name="erro_bielas">Preencha o Comprimento das Bielas!</string>
-    <string name="erro_cilindros">Preencha a Quantidade de Cilindros!</string>
-    <string name="erro_curso_pistao">Preencha o Curso do Pistão!</string>
-    <string name="erro_rotacao">Preencha a Rotação Máxima!</string>
-    <string name="erro_largura1">Preencha a Largura da Roda Original!</string>
-    <string name="erro_largura2">Preencha a Largura da Roda Alterada!</string>
-    <string name="erro_largura">Preencha o Campo Largura!</string>
-    <string name="erro_altura1">Preencha a Altura da Roda Original!</string>
-    <string name="erro_altura2">Preencha a Altura da Roda Alterada!</string>
-    <string name="erro_altura">Preencha a Altura da roda!</string>
-    <string name="erro_aro1">Preencha o Aro da Roda Original!</string>
-    <string name="erro_aro2">Preencha o Aro da Roda Alterada!</string>
-    <string name="erro_aro">Preencha o Campo Aro!</string>
     <string name="erro_pri">Preencha o Campo 1ª!</string>
     <string name="erro_seg">Preencha o Campo 2ª!</string>
     <string name="erro_ter">Preencha o Campo 3ª!</string>
@@ -121,9 +124,6 @@
     <string name="erro_qui">Preencha o Campo 5ª!</string>
     <string name="erro_sex">Preencha o Campo 6ª!</string>
     <string name="erro_dif">Preencha o Campo Diferencial!</string>
-    <string name="erro_potencia">Preencha o Campo Potência!</string>
-    <string name="erro_injetores">Preencha o Campo Número de Injetores!</string>
-
 
 
     <string name="resultado_velocidade">Velocidade Máxima</string>
@@ -137,18 +137,10 @@
     <string name="plano">Plano</string>
     <string name="domo">Com domo</string>
 
-    <string name="calctam">Calcular Bico</string>
-    <string name="calcpot">Calcular Potência</string>
-
     <string name="erro_volume_camara">Preencha o Campo Volume da câmara!</string>
     <string name="erro_espessura_junta">Preencha o Campo Espessura da Junta!</string>
     <string name="erro_volume_domo">Preencha o Campo Volume do Domo!</string>
     <string name="erro_volume_cava">Preencha o Campo Volume das cavas!</string>
-
-    <string name="diam_original">Diâmetro Original: </string>
-    <string name="diam_alterado">Diâmetro Alterado: </string>
-    <string name="diferenca">Diferença:</string>
-
 
 
     <string name="campo_torque" translatable="false">Torque (kgfm):</string>
@@ -165,6 +157,12 @@
     <string name="Rodas"></string>
     <string name="roda2"></string>
     <string name="rotacao_max"></string>
+    <string name="erro_largura"></string>
+    <string name="erro_altura"></string>
+    <string name="erro_aro"></string>
+    <string name="erro_rotacao"></string>
+    <string name="erro_diam"></string>
+    <string name="erro_potencia"></string>
 
 
 

@@ -28,30 +28,30 @@ public class ConfigFragment extends Fragment implements View.OnTouchListener {
     }
 
     private void setup(){
-        btncompartilhar = (Button) view.findViewById(R.id.btncompartilhar);
-        btnavaliar = (Button) view.findViewById(R.id.btnavaliar);
+        //btncompartilhar = (Button) view.findViewById(R.id.btncompartilhar);
+        //btnavaliar = (Button) view.findViewById(R.id.btnavaliar);
     }
 
     private void setupAction(){
-        btncompartilhar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent shareIntent = new Intent(Intent.ACTION_SEND);
-                shareIntent.setType("text/plain");
-                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Compartilhar");
-                shareIntent.putExtra(Intent.EXTRA_TEXT, "Conheça o aplicativo Calculadora automotiva.\n https://play.google.com/store/apps/details?id=br.com.gpistore.calculosautomotivos");
-                startActivity(shareIntent);
-            }
-        });
-
-        btnavaliar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("market://details?id=br.com.gpistore.calculosautomotivos"));
-                startActivity(intent);
-            }
-        });
+//        btncompartilhar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+//                shareIntent.setType("text/plain");
+//                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Compartilhar");
+//                shareIntent.putExtra(Intent.EXTRA_TEXT, "Conheça o aplicativo Calculadora automotiva.\n https://play.google.com/store/apps/details?id=br.com.gpistore.calculosautomotivos");
+//                startActivity(shareIntent);
+//            }
+//        });
+//
+//        btnavaliar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Intent.ACTION_VIEW);
+//                intent.setData(Uri.parse("market://details?id=br.com.gpistore.calculosautomotivos"));
+//                startActivity(intent);
+//            }
+//        });
     }
 
 

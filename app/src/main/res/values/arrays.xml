@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="array_bicos_calculo_tipo">
-        <item>Cálculo de potência</item>
         <item>Cálculo de bicos injetores</item>
+        <item>Cálculo de potência</item>
     </array>
     <array name="array_bicos_combustivel">
         <item>Álcool</item>
@@ -17,5 +17,10 @@
         <item>80&#65130; </item>
         <item>90&#65130;</item>
         <item>100&#65130;</item>
+    </array>
+
+    <array name="array_torque_tipo">
+        <item>Potência => Torque</item>
+        <item>Torque => Potência</item>
     </array>
 </resources>
