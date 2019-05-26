@@ -2,6 +2,7 @@
 package br.com.gpistore.calculosautomotivos.fragments;
 
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -17,60 +18,61 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.ArrayList;
 
 import br.com.gpistore.calculosautomotivos.R;
+import common.utils;
 
 
 public class TaxaFragment extends Fragment implements View.OnTouchListener {
     View view;
-    EditText campo_curso,campo_diam,campo_vlpistao, campo_vlcamara, campo_junta;
-    TextView campo_valor_taxa,lblvolumepistao;
-    LinearLayout linha_vlpistao;
+    TextInputLayout campo_curso,campo_diam,campo_vlpistao, campo_vlcamara, campo_junta;
+    TextView lbl_valor_taxa;
+    LinearLayout layout_result;
+    int cdtipo =0;
+
     Button btncalcular;
     Spinner tipopistao;
-    boolean fgcava,fgdomo;
     ArrayAdapter<String> SpinerPistaoAdapter;
-
+    ArrayList<TextInputLayout> ListaCampos;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_taxa, container, false);
         this.getActivity().setTitle(R.string.opt_taxa);
-        lblvolumepistao = (TextView) view.findViewById(R.id.lblvolumepistao);
-        linha_vlpistao = (LinearLayout) view.findViewById(R.id.linha_vlpistao);
-        btncalcular = (Button) view.findViewById(R.id.btncalcular);
-        campo_curso = (EditText)    view.findViewById(R.id.txtcurso);
-        campo_diam= (EditText)    view.findViewById(R.id.txtdiam);
-        campo_vlpistao= (EditText)    view.findViewById(R.id.txtvlpistao);
-        campo_vlcamara= (EditText)    view.findViewById(R.id.txtvlcamara);
-        campo_junta = (EditText)    view.findViewById(R.id.txtjunta);
 
-        String[] arrayTipoPistao = {getString(R.string.plano),getString(R.string.concavo),getString(R.string.domo)};
-        tipopistao = (Spinner) view.findViewById(R.id.spnpistao);
-        SpinerPistaoAdapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_dropdown_item, arrayTipoPistao);
+        btncalcular = (Button) view.findViewById(R.id.btncalcular);
+        campo_curso = (TextInputLayout) view.findViewById(R.id.taxa_txtcurso);
+        campo_diam= (TextInputLayout)    view.findViewById(R.id.taxa_txtdiametro);
+        campo_vlpistao= (TextInputLayout)    view.findViewById(R.id.taxa_volumedomo);
+        campo_vlcamara= (TextInputLayout)    view.findViewById(R.id.taxa_txtvolumecamara);
+        campo_junta = (TextInputLayout)    view.findViewById(R.id.taxa_txtespessura);
+        lbl_valor_taxa = (TextView) view.findViewById(R.id.lbl_result);
+        layout_result = (LinearLayout) view.findViewById(R.id.layout_result);
+        tipopistao = (Spinner) view.findViewById(R.id.taxa_spnpistao);
+        SpinerPistaoAdapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.array_taxa_pistao));
         tipopistao.setAdapter(SpinerPistaoAdapter);
 
             tipopistao.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                     if(i == 0){
-                        linha_vlpistao.setVisibility(View.GONE);
-                        fgdomo = false;
-                        fgcava = false;
+                        cdtipo = 0;
+                        campo_vlpistao.setVisibility(View.GONE);
                     }else{
-                        linha_vlpistao.setVisibility(View.VISIBLE);
+                        campo_vlpistao.setVisibility(View.VISIBLE);
                         if(i == 1){
-                            lblvolumepistao.setText(getString(R.string.volume_cava));
-                            fgdomo = false;
-                            fgcava = true;
+                            cdtipo = 1;
+                            campo_vlpistao.setHint(getString(R.string.taxa_volumecava));
                         }else{
-                            lblvolumepistao.setText(getString(R.string.volume_domo));
-                            fgdomo = true;
-                            fgcava = false;
+                            cdtipo = 2;
+                            campo_vlpistao.setHint(getString(R.string.taxa_volumedomo));
                         }
                     }
                 }
-
+//
                 public void onNothingSelected(AdapterView<?> adapterView) {
                     return;
                 }
@@ -80,8 +82,6 @@ public class TaxaFragment extends Fragment implements View.OnTouchListener {
            @Override
             public void onClick(View v) {
                 calcular();
-                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(getContext().INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
             }
         });
 
@@ -96,49 +96,47 @@ public class TaxaFragment extends Fragment implements View.OnTouchListener {
 
     public void calcular() {
         NumberFormat mascara_taxa  = new DecimalFormat("#.##");
-        campo_valor_taxa = (TextView) view.findViewById(R.id.txtvalortaxa);
+        ListaCampos = new ArrayList<TextInputLayout>();
+        ListaCampos.add(campo_curso);
+        ListaCampos.add(campo_diam);
+        ListaCampos.add(campo_junta);
+        ListaCampos.add(campo_vlcamara);
+        if (!utils.validar(ListaCampos, getActivity())) {
 
-        if (campo_curso.getText().toString().length() == 0) {
-        } else {
-            if (campo_diam.getText().toString().length() == 0) {
-                Toast.makeText(getContext(), getString(R.string.erro_diam), Toast.LENGTH_LONG).show();
-            } else {
-                if (campo_vlcamara.getText().toString().length() == 0) {
-                  Toast.makeText(getContext(), getString(R.string.erro_volume_camara), Toast.LENGTH_LONG).show();
-                } else {
-                    if (campo_junta.getText().toString().length() == 0) {
-                        Toast.makeText(getContext(), getString(R.string.erro_espessura_junta), Toast.LENGTH_LONG).show();
-                    } else {
-                        if ((fgdomo == true || fgcava == true) && campo_vlpistao.getText().toString().length() == 0) {
-                            if (fgdomo == true){ Toast.makeText(getContext(), getString(R.string.erro_volume_domo), Toast.LENGTH_LONG).show();}
-                            if(fgcava == true){Toast.makeText(getContext(), getString(R.string.erro_volume_cava), Toast.LENGTH_LONG).show();}
-                        } else {
-                        //PI
-                            double PI = 3.14159265359;
-                            //Calculo do volume da junta
-                            double volumepistao = 0;
-                            double diam = Double.valueOf(campo_diam.getText().toString());
-                            double curso = Double.valueOf((campo_curso.getText().toString()));
-                            double espessura = Double.valueOf((campo_junta.getText().toString()));
-                            double volumecamara = Double.valueOf((campo_vlcamara.getText().toString()));
-                            double cilindrada = ((PI * (diam * diam))* curso) / 4000;
-                            double volumejunta = ((PI * (diam * diam))* espessura) / 4000;
-                            if (fgdomo){
-                                volumepistao = Double.valueOf((campo_vlpistao.getText().toString()));
-                                volumepistao = volumepistao * -1;
-                            }
-                            if (fgcava) {
-                                volumepistao = Double.valueOf((campo_vlpistao.getText().toString()));
-                            }
-                            volumecamara += volumejunta + volumepistao;
-                            double taxa = (cilindrada + volumecamara)/volumecamara;
-                            //!!corrigir escrito img_taxa!!!
-                            //campo_valor_taxa.setText(getString(R.string.img_taxa)+": "+mascara_taxa.format(img_taxa)+":1");
-                            campo_valor_taxa.setText("img_taxa: "+mascara_taxa.format(taxa)+":1");
-                        }
-                    }
+            //PI
+            double PI = 3.14159265359;
+            //Calculo do volume da junta
+            double volumepistao = 0;
+            double diam = Double.valueOf(campo_diam.getEditText().getText().toString());
+            double curso = Double.valueOf((campo_curso.getEditText().getText().toString()));
+            double espessura = Double.valueOf((campo_junta.getEditText().getText().toString()));
+            double volumecamara = Double.valueOf((campo_vlcamara.getEditText().getText().toString()));
+            double cilindrada = ((PI * (diam * diam)) * curso) / 4000;
+            double volumejunta = ((PI * (diam * diam)) * espessura) / 4000;
+
+            switch (cdtipo) {
+                case 0: {
+                    break;
+                }
+                case 1: {
+                    ListaCampos.add(campo_vlpistao);
+                    //cava
+                    volumepistao = Double.valueOf((campo_vlpistao.getEditText().getText().toString()));
+                    break;
+                }
+                case 2: {
+                    ListaCampos.add(campo_vlpistao);
+                    //domo
+                    volumepistao = Double.valueOf((campo_vlpistao.getEditText().getText().toString()));
+                    volumepistao = volumepistao * -1;
+                    break;
                 }
             }
+
+            volumecamara += volumejunta + volumepistao;
+            double taxa = (cilindrada + volumecamara) / volumecamara;
+            lbl_valor_taxa.setText(getString(R.string.taxa_result) + ": " + mascara_taxa.format(taxa) + ":1");
+            layout_result.setVisibility(View.VISIBLE);
         }
     }
 

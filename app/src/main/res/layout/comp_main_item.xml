@@ -31,7 +31,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="75dp"
             android:layout_weight="1"
-            android:gravity="center_vertical|center_horizontal"
+            android:gravity="center|center_horizontal|center_vertical"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Title"
             tools:text="Título do esquema" />

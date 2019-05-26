@@ -15,9 +15,6 @@ package br.com.gpistore.calculosautomotivos.fragments;
         import android.widget.LinearLayout;
         import android.widget.Spinner;
         import android.widget.TextView;
-        import android.widget.Toast;
-
-        import org.w3c.dom.Text;
 
         import java.text.DecimalFormat;
         import java.text.NumberFormat;
@@ -25,8 +22,6 @@ package br.com.gpistore.calculosautomotivos.fragments;
 
         import br.com.gpistore.calculosautomotivos.R;
         import common.utils;
-
-        import static br.com.gpistore.calculosautomotivos.R.id.linha_vlpistao;
 
 
 public class TorqueFragment extends Fragment implements View.OnTouchListener {

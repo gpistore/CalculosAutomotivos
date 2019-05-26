@@ -29,7 +29,7 @@ public class Avaliacao {
     public void mostraAvaliacao(){
         if(nracessos > 5){
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
-            alertDialog.setTitle(context.getString(R.string.classifique));
+            alertDialog.setTitle(context.getString(R.string.popup_classifique));
             alertDialog.setMessage(context.getString(R.string.texto_classifique));
             alertDialog.setPositiveButton(context.getString(R.string.btnpos), new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {

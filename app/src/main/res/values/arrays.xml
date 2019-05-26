@@ -23,4 +23,11 @@
         <item>Potência => Torque</item>
         <item>Torque => Potência</item>
     </array>
+
+    <array name="array_taxa_pistao">
+        <item>Plano</item>
+        <item>Côncavo</item>
+        <item>Com Domo</item>
+    </array>
+
 </resources>

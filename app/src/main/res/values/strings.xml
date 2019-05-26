@@ -3,6 +3,7 @@
     <string name="app_name">Calculadora Automotiva</string>
     <string name="navigation_drawer_open">Abrir Aba de Navegação</string>
     <string name="navigation_drawer_close">Fechar Aba de Navegação</string>
+    <string name="texto_inicial">Escolha o Cálculo que deseja</string>
     <!--/Títulos-->
 
     <!--Opções Menu-->
@@ -58,7 +59,15 @@
 
     <!--taxa-->
     <string name="taxa_diametro">Diametro</string>
-    <string name="taxa_curso_virabrequim">Curso do Virabrequim</string>
+    <string name="taxa_curso">Curso do Virabrequim</string>
+    <string name="taxa_espessura">Espessura da Junta (mm)</string>
+    <string name="taxa_camara">Volume da Câmara</string>
+    <string name="taxa_volumepistao">Volume do Pistão</string>
+    <string name="taxa_tipopistao">Tipo do Pistão</string>
+    <string name="taxa_volumecava">Volume da cava</string>
+    <string name="taxa_volumedomo">Volume do domo</string>
+    <string name="taxa_result">Taxa</string>
+
 
     <!--taxa-->
 
@@ -71,11 +80,26 @@
     <!--/torque-->
 
     <!-- Câmbio -->
+    <string name="cambio_rodas">Tamanho dos Pneus</string>
+    <string name="cambio_largura">Largura</string>
+    <string name="cambio_altura">Altura</string>
+    <string name="cambio_aro">Aro</string>
+    <string name="cambio_relacao">Relação de Marchas</string>
+    <string name="cambio_primeira">1ª</string>
+    <string name="cambio_segunda">2ª</string>
+    <string name="cambio_terceira">3ª</string>
+    <string name="cambio_quarta">4ª</string>
+    <string name="cambio_quinta">5ª</string>
+    <string name="cambio_sexta">6ª</string>
+    <string name="cambio_diferencial">Diferencial</string>
+    <string name="cambio_rotacao">Rotação Máxima</string>
+    <string name="cambio_velocidade">Velocidade Máxima</string>
+    <string name="cambio_grafico">Gráfico</string>
 
     <!-- /Câmbio -->
 
     <!-- Config -->
-    <string name="gpistoreapps">GPistore Apps</string>
+    <string name="config_gpistoreapps">Desenvolvido por GPistore Apps</string>
     <string name="config_compartilhar">Compartilhe</string>
     <string name="config_classifique">Classifique</string>
     <string name="config_versao">Versão 2.0</string>
@@ -83,7 +107,11 @@
     <!-- /Config -->
 
     <!-- /Popup Classifique -->
-    <string name="classifique"> Classifique</string>
+    <string name="popup_classifique"> Classifique</string>
+    <string name="texto_classifique">Agora que você conhece o aplicativo, avalie-o na Play Store</string>
+    <string name="btnpos" >Avaliar</string>
+    <string name="btnneu">Mais tarde</string>
+    <string name="btnneg">Não mostrar novamente</string>
     <!-- /Popup Classifique -->
 
     <!-- Common -->
@@ -91,8 +119,6 @@
     <string name="obrigatorio">Campo Obrigatório!</string>
 
     <!-- /Common -->
-
-
 
     <!--Campos-->
 
@@ -106,17 +132,6 @@
     <string name="Diferencial">Diferencial: </string>
     <string name="rotacao_maxima">Rotação Máxima(rpm): </string>
 
-    <string name="injetores">Número de Injetores: </string>
-    <string name="tipo_motor">Tipo de Motor: </string>
-    <string name="combustivel">Combustível: </string>
-    <string name="capacidade">Capacidade Utilizada: </string>
-
-    <string name="volume_domo">Volume do domo</string>
-    <string name="volume_cava">Volume das cavas</string>
-
-
-    <string name="torquexpot">Torque => Potência</string>
-    <string name="potxtorque">Potência => Torque</string>
     <string name="erro_pri">Preencha o Campo 1ª!</string>
     <string name="erro_seg">Preencha o Campo 2ª!</string>
     <string name="erro_ter">Preencha o Campo 3ª!</string>
@@ -124,38 +139,16 @@
     <string name="erro_qui">Preencha o Campo 5ª!</string>
     <string name="erro_sex">Preencha o Campo 6ª!</string>
     <string name="erro_dif">Preencha o Campo Diferencial!</string>
-
-
     <string name="resultado_velocidade">Velocidade Máxima</string>
-    <string name="texto_inicial">Escolha o Cálculo que deseja</string>
-
-
-    <string name="tipo_pistao">Tipo de Pistão</string>
-    <string name="volume_camara">Volume da câmara</string>
-    <string name="espessura_junta">Espessura da junta(mm)</string>
-    <string name="concavo">Concavo</string>
-    <string name="plano">Plano</string>
-    <string name="domo">Com domo</string>
-
-    <string name="erro_volume_camara">Preencha o Campo Volume da câmara!</string>
-    <string name="erro_espessura_junta">Preencha o Campo Espessura da Junta!</string>
-    <string name="erro_volume_domo">Preencha o Campo Volume do Domo!</string>
-    <string name="erro_volume_cava">Preencha o Campo Volume das cavas!</string>
-
-
-    <string name="campo_torque" translatable="false">Torque (kgfm):</string>
-
-    <string name="texto_classifique">Agora que você conhece o aplicativo, avalie-o na Play Store</string>
-    <string name="btnpos" >Avaliar</string>
-    <string name="btnneu">Mais tarde</string>
-    <string name="btnneg">Não mostrar novamente</string>
 
 
 
-    <string name="roda1"></string>
-    <string name="medida"></string>
+
+
+
+
+
     <string name="Rodas"></string>
-    <string name="roda2"></string>
     <string name="rotacao_max"></string>
     <string name="erro_largura"></string>
     <string name="erro_altura"></string>

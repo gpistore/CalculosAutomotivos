@@ -37,7 +37,7 @@ public class Propaganda {
 
     private void requestNewInterstitial() {
         AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice("3E57B5136D19E0854E00586D5E6A581A")
+                .addTestDevice("BF2BEE2F97EAE573F08060196299894C")
                 .build();
         mInterstitialAd.loadAd(adRequest);
     }
