@@ -16,14 +16,27 @@ android {
         applicationId "br.com.gpistore.calculosautomotivos"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 5
-        versionName "2.0"
+        versionCode 7
+        versionName "2.01"
         signingConfig signingConfigs.config
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    // Specifies one flavor dimension.
+    flavorDimensions "version"
+    productFlavors {
+        free {
+            dimension "version"
+
+        }
+        pro {
+            dimension "version"
+            applicationIdSuffix ".pro"
+            versionNameSuffix "-Pro"
         }
     }
 }
