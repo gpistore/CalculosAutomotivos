@@ -7,7 +7,7 @@ import android.content.SharedPreferences;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
-
+import static br.com.gpistore.calculosautomotivos.BuildConfig.FLAVOR;
 
 public class Propaganda {
 
@@ -43,16 +43,17 @@ public class Propaganda {
     }
 
     public void mostra(){
-        if (mInterstitialAd.isLoaded() && click) {
-            mInterstitialAd.show();
-            click = false;
-        }else{
-            click = true;
+        if (FLAVOR != "pro") {
+            if (mInterstitialAd.isLoaded() && click) {
+                mInterstitialAd.show();
+                click = false;
+            } else {
+                click = true;
+            }
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("click", click);
+            editor.apply();
         }
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putBoolean("click", click);
-        editor.apply();
-
     }
 
 }

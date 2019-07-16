@@ -9,14 +9,15 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.LinearLayout;
+
+import static br.com.gpistore.calculosautomotivos.BuildConfig.FLAVOR;
 
 import br.com.gpistore.calculosautomotivos.R;
 
 public class ConfigFragment extends Fragment implements View.OnTouchListener {
     View view;
-    LinearLayout compartilhar,avaliar;
+    LinearLayout compartilhar,avaliar,pro;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_config, container, false);
@@ -31,6 +32,10 @@ public class ConfigFragment extends Fragment implements View.OnTouchListener {
     private void setup(){
         compartilhar = (LinearLayout) view.findViewById(R.id.layout_compartilhe);
         avaliar = (LinearLayout) view.findViewById(R.id.layout_clasifique);
+        pro = (LinearLayout) view.findViewById(R.id.layout_pro);
+        if (FLAVOR == "pro"){
+            pro.setVisibility(View.GONE);
+        }
     }
 
     private void setupAction(){
@@ -50,6 +55,15 @@ public class ConfigFragment extends Fragment implements View.OnTouchListener {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("market://details?id=br.com.gpistore.calculosautomotivos"));
+                startActivity(intent);
+            }
+        });
+
+        pro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("market://details?id=br.com.gpistore.calculosautomotivos.pro"));
                 startActivity(intent);
             }
         });

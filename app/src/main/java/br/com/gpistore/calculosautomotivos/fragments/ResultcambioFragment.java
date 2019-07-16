@@ -2,20 +2,14 @@ package br.com.gpistore.calculosautomotivos.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.jjoe64.graphview.GraphView;
-import com.jjoe64.graphview.LegendRenderer;
-import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
@@ -62,7 +56,7 @@ public class ResultcambioFragment extends Fragment implements View.OnTouchListen
 
         double circ = ((((Double.valueOf(lar)/10)*(Double.valueOf(alt)/100)*2) + (Double.valueOf(aro) * 2.54))/100)* 3.14159265359;
         cons = (circ * 0.06)/Double.valueOf(dif);
-        if(pri != null){
+        if(!pri.isEmpty() && Double.valueOf(pri)> 0.0){
             Double vel = getVelocidade(pri,rot);
             velmax = vel;
             LineGraphSeries<DataPoint> series1 = new LineGraphSeries<>(new DataPoint[] {
@@ -77,7 +71,7 @@ public class ResultcambioFragment extends Fragment implements View.OnTouchListen
 
 
 
-        if(!seg.isEmpty()){
+        if(!seg.isEmpty() && Double.valueOf(seg)> 0.0){
             Double vel = getVelocidade(seg,rot);
             if(vel > velmax){
                 velmax = vel;
@@ -92,7 +86,7 @@ public class ResultcambioFragment extends Fragment implements View.OnTouchListen
         }else{
             lbl_seg.setText("2ª: -");
         }
-        if(!ter.isEmpty()){
+        if(!ter.isEmpty()&& Double.valueOf(ter)> 0.0){
             Double vel = getVelocidade(ter,rot);
             if(vel > velmax){
                 velmax = vel;
@@ -107,7 +101,7 @@ public class ResultcambioFragment extends Fragment implements View.OnTouchListen
         }else{
             lbl_ter.setText("3ª: -");
         }
-        if(!qua.isEmpty()){
+        if(!qua.isEmpty() && Double.valueOf(qua)> 0.0){
             Double vel = getVelocidade(qua,rot);
             if(vel > velmax){
                 velmax = vel;
@@ -121,7 +115,7 @@ public class ResultcambioFragment extends Fragment implements View.OnTouchListen
         }else{
             lbl_qua.setText("4ª: -");
         }
-        if(!qui.isEmpty()){
+        if(!qui.isEmpty() && Double.valueOf(qui)> 0.0){
             Double vel = getVelocidade(qui,rot);
             if(vel > velmax){
                 velmax = vel;
@@ -135,7 +129,7 @@ public class ResultcambioFragment extends Fragment implements View.OnTouchListen
         }else{
             lbl_qui.setText("5ª: -");
         }
-        if(!sex.isEmpty()){
+        if(!sex.isEmpty() && Double.valueOf(sex)> 0.0){
             Double vel = getVelocidade(sex,rot);
             if(vel > velmax){
                 velmax = vel;

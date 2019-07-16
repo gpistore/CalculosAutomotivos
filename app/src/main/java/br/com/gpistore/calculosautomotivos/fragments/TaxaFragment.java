@@ -101,6 +101,11 @@ public class TaxaFragment extends Fragment implements View.OnTouchListener {
         ListaCampos.add(campo_diam);
         ListaCampos.add(campo_junta);
         ListaCampos.add(campo_vlcamara);
+
+        if(cdtipo > 0){
+            ListaCampos.add(campo_vlpistao);
+        }
+
         if (!utils.validar(ListaCampos, getActivity())) {
 
             //PI
