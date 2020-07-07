@@ -12,7 +12,7 @@ import static br.com.gpistore.calculosautomotivos.BuildConfig.FLAVOR;
 public class Propaganda {
 
     private InterstitialAd mInterstitialAd;
-    private boolean click = true;
+    private boolean click;
     Context context;
     SharedPreferences prefs;
 
@@ -55,5 +55,4 @@ public class Propaganda {
             editor.apply();
         }
     }
-
 }

@@ -1,8 +1,8 @@
 package br.com.gpistore.calculosautomotivos.fragments;
 
 import android.os.Bundle;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.app.Fragment;
+import com.google.android.material.textfield.TextInputLayout;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -52,26 +52,26 @@ public class BicosFragment extends Fragment implements View.OnTouchListener {
     private void setup(){
         campo_nrinjetores = (TextInputLayout)   view.findViewById(R.id.bicos_txtinjetores);
         campo_potencia =    (TextInputLayout)   view.findViewById(R.id.bicos_txtpotencia);
-        lbl_valor =         (TextView) view.findViewById(R.id.bicos_lblvalor);;
+        lbl_valor =         (TextView) view.findViewById(R.id.bicos_lblvalor);
         btncalcular =       (Button) view.findViewById(R.id.btncalcular);
         layout_result =     (LinearLayout)      view.findViewById(R.id.layout_result);
 
-        spn_tipo =          (Spinner) view.findViewById(R.id.torque_spntipo);
+        spn_tipo = view.findViewById(R.id.torque_spntipo);
         spn_tipoAdapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.array_bicos_calculo_tipo));
         spn_tipo.setAdapter(spn_tipoAdapter);
         spn_tipo.setPrompt(getString(R.string.bicos_calculo_tipo));
 
-        spn_comb =          (Spinner) view.findViewById(R.id.bicos_spncomb);
+        spn_comb = view.findViewById(R.id.bicos_spncomb);
         spn_combAdapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.array_bicos_combustivel));
         spn_comb.setAdapter(spn_combAdapter);
         spn_comb.setPrompt(getString(R.string.bicos_combustivel));
 
-        spn_motor =         (Spinner) view.findViewById(R.id.bicos_spnmotor);
+        spn_motor = view.findViewById(R.id.bicos_spnmotor);
         spn_motorAdapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.array_bicos_motor));
         spn_motor.setAdapter(spn_motorAdapter);
         spn_motor.setPrompt(getString(R.string.bicos_tipo_motor));
 
-        spn_capacidade =    (Spinner) view.findViewById(R.id.bicos_spncapacidade);
+        spn_capacidade = view.findViewById(R.id.bicos_spncapacidade);
         spn_capacidadeAdapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.array_bicos_capac));
         spn_capacidade.setAdapter(spn_capacidadeAdapter);
         spn_capacidade.setPrompt(getString(R.string.bicos_capacidade));
@@ -112,7 +112,7 @@ public class BicosFragment extends Fragment implements View.OnTouchListener {
 
     }
 
-    public void calcular() {
+    private void calcular() {
         ListaCampos = new ArrayList<TextInputLayout>();
         ListaCampos.add(campo_potencia);
         ListaCampos.add(campo_nrinjetores);

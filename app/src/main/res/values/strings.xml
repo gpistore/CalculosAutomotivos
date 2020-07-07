@@ -103,7 +103,7 @@
     <string name="config_compartilhar">Compartilhe</string>
     <string name="config_classifique">Classifique</string>
     <string name="config_versao">Versão 2.1</string>
-    <string name="config_pro">Conheça a versão PRO</string>
+    <string name="config_pro">Conheça a versão PRO - sem propagandas</string>
 
     <!-- /Config -->
 
@@ -118,6 +118,8 @@
     <!-- Common -->
     <string name="botao_calcular">Calcular</string>
     <string name="obrigatorio">Campo Obrigatório!</string>
+    <string name="erro_rotacao_minima">Rotação Máxima deve ser maior que 1000!</string>
+
 
     <!-- /Common -->
 

@@ -1,7 +1,7 @@
 package br.com.gpistore.calculosautomotivos.fragments;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -17,6 +17,7 @@ import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 import br.com.gpistore.calculosautomotivos.R;
+import common.utils;
 
 
 public class ResultcambioFragment extends Fragment implements View.OnTouchListener {
@@ -166,8 +167,7 @@ public class ResultcambioFragment extends Fragment implements View.OnTouchListen
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(getContext().INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+        utils.escondeTeclado(getActivity());
         return false;
     }
 }

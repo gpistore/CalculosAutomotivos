@@ -1,8 +1,8 @@
 package br.com.gpistore.calculosautomotivos.fragments;
 
         import android.os.Bundle;
-        import android.support.design.widget.TextInputLayout;
-        import android.support.v4.app.Fragment;
+        import com.google.android.material.textfield.TextInputLayout;
+        import androidx.fragment.app.Fragment;
         import android.view.LayoutInflater;
         import android.view.MotionEvent;
         import android.view.View;
@@ -11,7 +11,6 @@ package br.com.gpistore.calculosautomotivos.fragments;
         import android.widget.AdapterView;
         import android.widget.ArrayAdapter;
         import android.widget.Button;
-        import android.widget.EditText;
         import android.widget.LinearLayout;
         import android.widget.Spinner;
         import android.widget.TextView;
@@ -123,39 +122,9 @@ public class TorqueFragment extends Fragment implements View.OnTouchListener {
 
     }
 
-    /*
-
-
-        if (campo_potencia.getText().toString().length() == 0) {
-            Toast.makeText(getContext(), getString(R.string.erro_potencia), Toast.LENGTH_LONG).show();
-        } else {
-            if (campo_rotacao.getText().toString().length() == 0) {
-                Toast.makeText(getContext(), getString(R.string.erro_rotacao), Toast.LENGTH_LONG).show();
-            } else {
-                double potencia = Double.valueOf(campo_potencia.getText().toString());
-                double rotacao = Double.valueOf((campo_rotacao.getText().toString()));
-                double result;
-                double PI2 =  2*3.14159265359;
-
-                if (fgtorque){
-                    potencia = potencia*9.80665;
-                    result = ((potencia * PI2 * rotacao)/60000)*1.3596216;
-                    campo_resultado.setText(getString(R.string.bicos_potencia)+mascara_result.format(result));
-                }else{
-                    potencia = potencia*0.7354988;
-                    result = (potencia * 60000)/(PI2 * rotacao)*0.101972;
-                    // result = constante * potencia / rotacao;
-                    campo_resultado.setText(getString(R.string.campo_torque)+mascara_result.format(result));
-                }
-
-            }
-        }
-    }
-*/
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(getContext().INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+        utils.escondeTeclado(getActivity());
         return false;
     }
 

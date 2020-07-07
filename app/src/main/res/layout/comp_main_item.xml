@@ -6,7 +6,7 @@
     tools:context="br.com.gpistore.calculosautomotivos.fragments.MainFragment">
 
 
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -35,6 +35,6 @@
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Title"
             tools:text="Título do esquema" />
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>

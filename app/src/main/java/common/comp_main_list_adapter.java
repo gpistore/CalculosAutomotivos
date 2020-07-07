@@ -1,8 +1,8 @@
 package common;
 
 import android.content.Context;
-import android.content.DialogInterface;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,8 +30,8 @@ public class comp_main_list_adapter extends RecyclerView.Adapter<comp_main_list_
         public main_list_view_holder(View view) {
             super(view);
             itemView.setOnClickListener(this);
-            this.imageView = (ImageView) view.findViewById(R.id.main_item_img);
-            this.txtview = (TextView) view.findViewById(R.id.main_item_text);
+            this.imageView = view.findViewById(R.id.main_item_img);
+            this.txtview = view.findViewById(R.id.main_item_text);
 
         }
 

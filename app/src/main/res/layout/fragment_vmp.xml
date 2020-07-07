@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/vmp_txtcurso"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -22,9 +22,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/vmp_curso"
             android:inputType="numberDecimal" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/vmp_txtrotacao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/vmp_rotacao"
             android:inputType="number" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btncalcular"
@@ -91,4 +91,4 @@
             tools:text="VMP : 200 m/s" />
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

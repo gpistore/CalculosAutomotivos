@@ -3,7 +3,7 @@ package br.com.gpistore.calculosautomotivos.fragments;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -15,7 +15,7 @@ import static br.com.gpistore.calculosautomotivos.BuildConfig.FLAVOR;
 
 import br.com.gpistore.calculosautomotivos.R;
 
-public class ConfigFragment extends Fragment implements View.OnTouchListener {
+public class ConfigFragment extends Fragment {
     View view;
     LinearLayout compartilhar,avaliar,pro;
 
@@ -24,7 +24,6 @@ public class ConfigFragment extends Fragment implements View.OnTouchListener {
         this.getActivity().setTitle(R.string.opt_config);
         setup();
         setupAction();
-        view.findViewById(R.id.mainlayout).setOnTouchListener(this);
 
         return view;
     }
@@ -67,14 +66,6 @@ public class ConfigFragment extends Fragment implements View.OnTouchListener {
                 startActivity(intent);
             }
         });
-    }
-
-
-    @Override
-    public boolean onTouch(View v, MotionEvent event) {
-        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(getContext().INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
-        return false;
     }
 }
 

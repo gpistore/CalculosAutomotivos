@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "536882093036",
+    "firebase_url": "https://calculadora-automotiva.firebaseio.com",
+    "project_id": "calculadora-automotiva",
+    "storage_bucket": "calculadora-automotiva.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536882093036:android:15db08d0ed99843d",
+        "android_client_info": {
+          "package_name": "br.com.gpistore.calculosautomotivos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536882093036-ev9s1bc9p5kmata257k8jgd8uk2ddjf8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlOMQRnjSTQtrUHHb4LRTEGA1JSAeqDus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536882093036-ev9s1bc9p5kmata257k8jgd8uk2ddjf8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2664724094770763~2167584036"
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536882093036:android:417acd512074fdc3a8bec9",
+        "android_client_info": {
+          "package_name": "br.com.gpistore.calculosautomotivos.pro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536882093036-ev9s1bc9p5kmata257k8jgd8uk2ddjf8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlOMQRnjSTQtrUHHb4LRTEGA1JSAeqDus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536882093036-ev9s1bc9p5kmata257k8jgd8uk2ddjf8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

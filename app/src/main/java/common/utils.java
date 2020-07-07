@@ -2,9 +2,8 @@ package common;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.design.widget.TextInputLayout;
+import com.google.android.material.textfield.TextInputLayout;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ import br.com.gpistore.calculosautomotivos.R;
 public class utils {
 
     public static boolean validar (ArrayList<TextInputLayout> campos,Context c){
-        ArrayList<String> lista = new ArrayList<String>();
+        ArrayList<String> lista = new ArrayList<>();
         TextView label;
         boolean retorno = false;
         for( TextInputLayout campo : campos ) {
@@ -33,9 +32,22 @@ public class utils {
         return retorno;
     }
 
+    public static boolean validarRotacaoMinima(TextInputLayout rotacao,Context c){
+
+        if(Double.valueOf(rotacao.getEditText().getText().toString())>1000.0){
+            return false;
+        }else{
+            rotacao.setError(c.getString(R.string.erro_rotacao_minima));
+            return true;
+        }
+
+
+    }
+
+
     public static void escondeTeclado(Activity A){
         InputMethodManager imm = (InputMethodManager) A.getSystemService(A.getApplicationContext().INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(A.getCurrentFocus().getWindowToken(), 0);
+        imm.hideSoftInputFromWindow(A.getWindow().getDecorView().getRootView().getWindowToken(), 0);
     }
 
 

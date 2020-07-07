@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainlayout"
@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/rl_txtvirabrequim"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -24,9 +24,9 @@
             android:hint="@string/rl_curso"
             android:inputType="numberDecimal"
             android:importantForAutofill="no" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/rl_txtbielas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -45,9 +45,9 @@
             android:hint="@string/rl_comp"
             android:inputType="numberDecimal"
             android:importantForAutofill="no" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/rl_txtdiametro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -66,9 +66,9 @@
             android:layout_height="wrap_content"
             android:hint="@string/rl_diam"
             android:inputType="numberDecimal" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/rl_txtcilindros"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/rl_cil"
             android:inputType="number" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btncalcular"
@@ -157,11 +157,11 @@
             tools:text="Cilindrada: 2000" />
     </LinearLayout>
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="358dp" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
