@@ -1,5 +1,7 @@
 package br.com.gpistore.calculosautomotivos;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import com.google.android.material.navigation.NavigationView;
 import androidx.fragment.app.FragmentManager;
@@ -23,6 +25,8 @@ import br.com.gpistore.calculosautomotivos.fragments.TorqueFragment;
 import br.com.gpistore.calculosautomotivos.fragments.VmpFragment;
 import common.Avaliacao;
 import common.Propaganda;
+
+import static br.com.gpistore.calculosautomotivos.BuildConfig.FLAVOR;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     public NavigationView navigationView;
@@ -48,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
         avaliacao.mostraAvaliacao();
         navigationView = (NavigationView) findViewById(R.id.nav_view);
+        if (FLAVOR == "pro"){
+            navigationView.findViewById(R.id.pro).setVisibility(View.GONE);
+        }
         if (navigationView != null) {
             navigationView.setNavigationItemSelectedListener(this);
         }
@@ -130,6 +137,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 ft.replace(R.id.mainframe, config);
                 ft.addToBackStack("pilha");
                 ft.commit();
+                break;
+            case (R.id.pro):
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("market://details?id=br.com.gpistore.calculosautomotivos.pro"));
+                startActivity(intent);
                 break;
             default:
                 MainFragment Main = new MainFragment();

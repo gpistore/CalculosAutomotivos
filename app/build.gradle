@@ -3,10 +3,16 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 android {
     signingConfigs {
-        config {
+        free {
             keyAlias 'calculos automotivos'
             keyPassword 'isi7@@3'
             storeFile file('D://Onedrive/Desenvolvimento (estático)/Mobile/Keystores/CalculosAutomotivos/calculosautomotivos.jks')
+            storePassword 'isi7@@3'
+        }
+        pro {
+            keyAlias 'calculadoraautomotivapro'
+            keyPassword 'isi7@@3'
+            storeFile file('D://Onedrive/Desenvolvimento (estático)/Mobile/Keystores/CalculosAutomotivos/calculosautomotivospro.jks')
             storePassword 'isi7@@3'
         }
     }
@@ -17,9 +23,9 @@ android {
         applicationId "br.com.gpistore.calculosautomotivos"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 2002
-        versionName "2.02"
-        signingConfig signingConfigs.config
+        versionCode 2003
+        versionName "2.3"
+
     }
     buildTypes {
         release {
@@ -32,9 +38,11 @@ android {
     productFlavors {
         free {
             dimension "version"
+            signingConfig signingConfigs.free
 
         }
         pro {
+            signingConfig signingConfigs.pro
             dimension "version"
             applicationIdSuffix ".pro"
             versionNameSuffix "-Pro"

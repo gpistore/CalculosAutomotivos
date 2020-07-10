@@ -7,6 +7,7 @@
     <!--/Títulos-->
 
     <!--Opções Menu-->
+    <string name="opt_pro">Remova os Anúncios!</string>
     <string name="opt_cambio">Cálculo Câmbio</string>
     <string name="opt_rodas">Tamanho Rodas</string>
     <string name="opt_rl">R/L e Cilindrada</string>
@@ -102,7 +103,7 @@
     <string name="config_gpistoreapps">Desenvolvido por GPistore Apps</string>
     <string name="config_compartilhar">Compartilhe</string>
     <string name="config_classifique">Classifique</string>
-    <string name="config_versao">Versão 2.1</string>
+    <string name="config_versao">Versão 2.3</string>
     <string name="config_pro">Conheça a versão PRO - sem propagandas</string>
 
     <!-- /Config -->

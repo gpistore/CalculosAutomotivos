@@ -39,6 +39,10 @@
             android:id="@+id/configuracoes"
             android:icon="@drawable/img_config"
             android:title="@string/opt_config" />
+        <item
+            android:id="@+id/pro"
+            android:icon="@drawable/img_pro"
+            android:title="@string/opt_pro" />
 
 
     </group>
